@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -187,9 +187,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7594736381303323828, guid: de474d2cd40d6ea45a56fdf5c8ad79fb, type: 3}
+      propertyPath: m_Name
+      value: UpperWallDoorWarehouse
+      objectReference: {fileID: 0}
+    - target: {fileID: -6450684098535787853, guid: de474d2cd40d6ea45a56fdf5c8ad79fb, type: 3}
+      propertyPath: m_Name
+      value: UpperWallDoorBlocked
+      objectReference: {fileID: 0}
+    - target: {fileID: -4845419198383733991, guid: de474d2cd40d6ea45a56fdf5c8ad79fb, type: 3}
+      propertyPath: m_Name
+      value: GreenWall
+      objectReference: {fileID: 0}
+    - target: {fileID: -2955562502506580004, guid: de474d2cd40d6ea45a56fdf5c8ad79fb, type: 3}
+      propertyPath: m_Name
+      value: UpperWallDoorOffice
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: de474d2cd40d6ea45a56fdf5c8ad79fb, type: 3}
       propertyPath: m_Name
-      value: basement
+      value: Basement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1125290503228006029, guid: de474d2cd40d6ea45a56fdf5c8ad79fb, type: 3}
+      propertyPath: m_Name
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940807810997136023, guid: de474d2cd40d6ea45a56fdf5c8ad79fb, type: 3}
+      propertyPath: m_Name
+      value: UpperWallDoorBasement
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175552907236278165, guid: de474d2cd40d6ea45a56fdf5c8ad79fb, type: 3}
+      propertyPath: m_Name
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -207,7 +235,7 @@ GameObject:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: DirectionalLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +330,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,9 +474,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7963981190000700606, guid: d103fd600baffbf41818df382d625f0e, type: 3}
+      propertyPath: m_Name
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: -4139077845864563600, guid: d103fd600baffbf41818df382d625f0e, type: 3}
+      propertyPath: m_Name
+      value: Column1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d103fd600baffbf41818df382d625f0e, type: 3}
       propertyPath: m_Name
-      value: first_floor
+      value: FirstFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345126491748192143, guid: d103fd600baffbf41818df382d625f0e, type: 3}
+      propertyPath: m_Name
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
