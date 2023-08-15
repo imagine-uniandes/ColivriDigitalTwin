@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1418,6 +1418,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.76
+      objectReference: {fileID: 0}
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.16013
@@ -1433,6 +1441,10 @@ PrefabInstance:
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831205441102535377, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.02
       objectReference: {fileID: 0}
     - target: {fileID: 8273310155128318546, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6411,9 +6423,9 @@ Transform:
   - {fileID: 1705082055}
   - {fileID: 1167664396}
   - {fileID: 1412045811}
+  - {fileID: 1181869949}
   - {fileID: 528679658}
   - {fileID: 2124446903}
-  - {fileID: 1181869949}
   - {fileID: 375043709}
   - {fileID: 527486148}
   - {fileID: 40279070}
@@ -9683,18 +9695,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9710,6 +9710,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -9769,7 +9781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528679658}
   m_Layer: 0
-  m_Name: DellMonitor8-1
+  m_Name: DellMonitor9-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9784,7 +9796,7 @@ Transform:
   m_GameObject: {fileID: 528679657}
   serializedVersion: 2
   m_LocalRotation: {x: -0.41292506, y: -0.5740144, z: -0.574015, w: 0.4129251}
-  m_LocalPosition: {x: 9.342, y: -0.168, z: 1.172}
+  m_LocalPosition: {x: 9.352, y: -0.168, z: 2.421}
   m_LocalScale: {x: 0.020000001, y: 0.020000001, z: 0.019999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10122,18 +10134,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -10149,6 +10149,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair9
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -10315,6 +10327,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.737
+      objectReference: {fileID: 0}
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.16013
@@ -10330,6 +10350,10 @@ PrefabInstance:
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831205441102535377, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.997
       objectReference: {fileID: 0}
     - target: {fileID: 8273310155128318546, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11965,6 +11989,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.82
+      objectReference: {fileID: 0}
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.16013
@@ -11980,6 +12012,10 @@ PrefabInstance:
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831205441102535377, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 8273310155128318546, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12156,18 +12192,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1679471455}
     m_Modifications:
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43
@@ -12223,6 +12247,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -16200,6 +16236,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.791
+      objectReference: {fileID: 0}
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.16013
@@ -16215,6 +16259,10 @@ PrefabInstance:
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831205441102535377, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.051
       objectReference: {fileID: 0}
     - target: {fileID: 8273310155128318546, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -16975,18 +17023,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -17002,6 +17038,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair10
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -21238,7 +21286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1181869949}
   m_Layer: 0
-  m_Name: DellMonitor9
+  m_Name: DellMonitor8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21253,7 +21301,7 @@ Transform:
   m_GameObject: {fileID: 1181869948}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 9.562, y: -0.16799994, z: 2.001}
+  m_LocalPosition: {x: 9.485, y: -0.16799994, z: 1.025}
   m_LocalScale: {x: 0.020000001, y: 0.020000001, z: 0.019999998}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23100,18 +23148,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -23127,6 +23163,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair7
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -24310,18 +24358,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -24337,6 +24373,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -25170,6 +25218,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.759
+      objectReference: {fileID: 0}
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.16013
@@ -25185,6 +25241,10 @@ PrefabInstance:
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831205441102535377, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.019
       objectReference: {fileID: 0}
     - target: {fileID: 8273310155128318546, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -29192,6 +29252,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.765
+      objectReference: {fileID: 0}
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.16013
@@ -29207,6 +29275,10 @@ PrefabInstance:
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831205441102535377, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.025
       objectReference: {fileID: 0}
     - target: {fileID: 8273310155128318546, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -29438,18 +29510,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -29465,6 +29525,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -31232,6 +31304,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.82
+      objectReference: {fileID: 0}
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.16013
@@ -31247,6 +31327,10 @@ PrefabInstance:
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831205441102535377, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.08
       objectReference: {fileID: 0}
     - target: {fileID: 8273310155128318546, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -32435,6 +32519,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.68
+      objectReference: {fileID: 0}
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.16013
@@ -32450,6 +32542,10 @@ PrefabInstance:
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831205441102535377, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 8273310155128318546, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -33252,18 +33348,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -33279,6 +33363,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair11
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -33459,18 +33555,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -33486,6 +33570,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair6
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -36115,6 +36211,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959746140727190843, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.756
+      objectReference: {fileID: 0}
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalScale.y
       value: 52.16013
@@ -36130,6 +36234,10 @@ PrefabInstance:
     - target: {fileID: 4978316518406933264, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831205441102535377, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.016
       objectReference: {fileID: 0}
     - target: {fileID: 8273310155128318546, guid: 21a15013223aa9e4f9904b823e3c32ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -36194,18 +36302,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -36221,6 +36317,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -36369,18 +36477,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -36396,6 +36492,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair13
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -38149,18 +38257,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -38176,6 +38272,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair12
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -38809,18 +38917,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 327064008815436722, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -38836,6 +38932,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 245f84bd30623bf42aef9f181dbdcd55, type: 3}
       propertyPath: m_Name
       value: Chair2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7853120362946791194, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5076484507258936684, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601552257854514524, guid: 22e94575049d8684cb97f5d7561b438d, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -38861,7 +38969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2124446903}
   m_Layer: 0
-  m_Name: DellMonitor8-2
+  m_Name: DellMonitor9-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38876,7 +38984,7 @@ Transform:
   m_GameObject: {fileID: 2124446902}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5380251, y: -0.4588344, z: -0.45883447, w: 0.538025}
-  m_LocalPosition: {x: 9.564, y: -0.16799994, z: 0.643}
+  m_LocalPosition: {x: 9.574, y: -0.16799994, z: 1.892}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.020000001}
   m_ConstrainProportionsScale: 0
   m_Children:
