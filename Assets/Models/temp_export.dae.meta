@@ -7,6 +7,21 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Metal_Corrugated_Shiny
+    second: {fileID: 2100000, guid: 633958d6b5333744c88e6b353b1135a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Corrugated_Shiny_0
+    second: {fileID: 2100000, guid: 19a98d229b79a094eab846bbe3b097d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: __Color_008_6
+    second: {fileID: 2100000, guid: 79d2ef5bb11d4e54797a5231e0704b15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: material_33
     second: {fileID: 2100000, guid: 438c82b1f244dfb45923aaf9e306b9ef, type: 2}
   materials:
