@@ -307,9 +307,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6240916134448718408}
   - component: {fileID: 7211413206336849297}
-  - component: {fileID: 4775743391522918938}
+  - component: {fileID: 4445313724889338051}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 2296059407570855838}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.52, y: 0.206, z: 0.34}
+  m_LocalPosition: {x: 0.07, y: -0.035, z: 0.039}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,9 +343,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 167
-  m_InnerSpotAngle: 21.80208
+  m_Range: 30
+  m_SpotAngle: 179
+  m_InnerSpotAngle: 111
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -392,7 +392,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &4775743391522918938
+--- !u!114 &4445313724889338051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
