@@ -1,8 +1,11 @@
 {
   "dependencies": {
+    "com.ultraleap.tracking": "6.11.0",
     "com.unity.collab-proxy": "2.0.5",
     "com.unity.feature.development": "1.0.1",
+    "com.unity.postprocessing": "3.2.2",
     "com.unity.probuilder": "5.1.0",
+    "com.unity.render-pipelines.universal": "14.0.8",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.5",
     "com.unity.ugui": "1.0.0",
@@ -38,5 +41,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "Ultraleap",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.ultraleap"
+      ]
+    }
+  ]
 }
