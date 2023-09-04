@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.ultraleap.tracking": "6.11.0",
     "com.unity.collab-proxy": "2.0.5",
     "com.unity.feature.development": "1.0.1",
     "com.unity.postprocessing": "3.2.2",
