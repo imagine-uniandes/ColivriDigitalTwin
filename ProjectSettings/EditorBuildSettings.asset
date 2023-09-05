@@ -4,11 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/n.falla.unity
-    guid: 5871f1098a4271345bef2daa3258c4f1
-  m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 44bda92e839bebf4893aba963b2b03cc, type: 2}
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: b1a0ebcc273b4b141a7e51b03c844cbd, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6d0fc30c595aa64429834226015f25f2, type: 2}
+  m_Scenes: []
+  m_configObjects: {}
