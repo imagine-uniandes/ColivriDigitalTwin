@@ -5,6 +5,8 @@ public class HeaderPanelNavigation : MonoBehaviour
 {
     public Button[] headerButtons;
     private int selectedIndex = 0;
+    public GameObject homePanel;
+    [SerializeField] private GameObject[] panelsToHide;
 
     private void Update()
     {
@@ -22,7 +24,16 @@ public class HeaderPanelNavigation : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.H))
         {
-            headerButtons[selectedIndex].onClick.Invoke();
+            if (homePanel != null)
+            {
+                homePanel.SetActive(true);
+                // Hide all other panels
+                foreach (var panel in panelsToHide)
+                {
+                    if (panel != null)
+                        panel.SetActive(false);
+                }
+            }
         }
     }
 }
