@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform mainCameraGroup;
-    public GameObject buttonsContainer;
+    public GameObject mainCameraGroup; // Reference to the MainCameraGroup
+    public GameObject buttonsContainer; // Reference to the GameObject containing the buttons
 
     private void Start()
     {
@@ -15,24 +15,24 @@ public class CameraController : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             int index = i;
-            buttons[i].onClick.AddListener(() => ActivateCameraInGroup(index));
+            buttons[i].onClick.AddListener(() => ActivateGX(index));
         }
     }
 
-    private void ActivateCameraInGroup(int index)
+    private void ActivateGX(int index)
     {
         // Check if the index is within valid bounds
-        if (index >= 0 && index < mainCameraGroup.childCount)
+        if (index >= 0 && index < mainCameraGroup.transform.childCount)
         {
-            // Disable all cameras in the group
-            foreach (Transform cameraTransform in mainCameraGroup)
+            // Disable all GXs in the group
+            foreach (Transform gxTransform in mainCameraGroup.transform)
             {
-                cameraTransform.gameObject.SetActive(false);
+                gxTransform.gameObject.SetActive(false);
             }
 
-            // Activate the selected camera
-            Transform selectedCamera = mainCameraGroup.GetChild(index);
-            selectedCamera.gameObject.SetActive(true);
+            // Activate the selected GX
+            Transform selectedGX = mainCameraGroup.transform.GetChild(index);
+            selectedGX.gameObject.SetActive(true);
         }
     }
 }
