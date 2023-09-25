@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
     public GameObject mainCameraGroup;
-    public GameObject buttonsContainer;
+    public GameObject buttonsContainer; // Use a single GameObject to hold all buttons
     public float rotationSpeed = 5f; // Speed of rotation in degrees per second
     public float movementSpeed = 1f; // Speed of movement
+    public Button[] arrowButtons; // Array of arrow buttons
     private Transform selectedGX;
     private int selectedIndex = -1; // Currently selected GX index
     private Vector3 initialPosition; // Initial position of the selected GX
@@ -17,18 +19,20 @@ public class CameraController : MonoBehaviour
     private bool rotationDirectionInvertedUD = false; // Flag to track if rotation direction is inverted for top-down rotation
     private float currentRotationY = 0f; // Current rotation angle for left-right rotation
     private float currentRotationX = 0f; // Current rotation angle for top-down rotation
+    private bool canMove = false; // Flag to allow movement when a button is clicked
 
     private void Start()
     {
-        // Get all buttons within the buttonsContainer
-        Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
-
         // Attach button click listeners
+        Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
         for (int i = 0; i < buttons.Length; i++)
         {
             int index = i;
-            buttons[i].onClick.AddListener(() => ActivateGX(index));
+            buttons[i].onClick.AddListener(() => ActivateMovement(index));
         }
+
+        // Disable the arrow buttons initially
+        DisableArrowButtons();
     }
 
     private void Update()
@@ -39,21 +43,21 @@ public class CameraController : MonoBehaviour
             return;
         }
 
-        if (isRotatingLR)
+        if (isRotatingLR && canMove)
         {
             // Rotate left-right (yaw)
             float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedLR ? -1f : 1f);
             currentRotationY += step;
             selectedGX.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
         }
-        else if (isRotatingUD)
+        else if (isRotatingUD && canMove)
         {
             // Rotate top-down (pitch)
             float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedUD ? -1f : 1f);
             currentRotationX += step;
             selectedGX.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
         }
-        else
+        else if (canMove)
         {
             // Move GX with arrow keys only when the keys are pressed
             float horizontalInput = Input.GetAxis("Horizontal");
@@ -73,12 +77,12 @@ public class CameraController : MonoBehaviour
         }
 
         // Check for 'r' and 'u' key presses to toggle rotation direction and reset inversion flags
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && canMove)
         {
             isRotatingLR = true;
             rotationDirectionInvertedLR = !rotationDirectionInvertedLR; // Invert rotation direction
         }
-        else if (Input.GetKeyDown(KeyCode.U))
+        else if (Input.GetKeyDown(KeyCode.U) && canMove)
         {
             isRotatingUD = true;
             rotationDirectionInvertedUD = !rotationDirectionInvertedUD; // Invert rotation direction
@@ -96,13 +100,16 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    private void ActivateGX(int index)
+    private void ActivateMovement(int index)
     {
         // Check if the index is within valid bounds
         if (index >= 0 && index < mainCameraGroup.transform.childCount)
         {
             // Deselect the current GX if one is selected
             DeselectGX();
+
+            // Enable the arrow buttons for movement
+            EnableArrowButtons();
 
             // Activate the selected GX
             selectedGX = mainCameraGroup.transform.GetChild(index);
@@ -116,6 +123,16 @@ public class CameraController : MonoBehaviour
             // Update the current rotation angles
             currentRotationY = selectedGX.eulerAngles.y;
             currentRotationX = selectedGX.eulerAngles.x;
+
+            // Allow movement when a button is clicked
+            canMove = true;
+
+            // Disable the buttons within buttonsContainer when arrowButtons are enabled
+            Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
+            foreach (Button button in buttons)
+            {
+                button.interactable = false;
+            }
         }
     }
 
@@ -139,8 +156,46 @@ public class CameraController : MonoBehaviour
         {
             selectedGX.position = initialPosition;
             selectedGX.rotation = initialRotation;
+            canMove = false; // Disallow movement when deselected
+
+            // Enable the buttons within buttonsContainer when returning to the selection menu
+            Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
+            foreach (Button button in buttons)
+            {
+                button.interactable = true;
+            }
+
+            DisableArrowButtons();
         }
-        // Reset GX
-        ActivateGX(selectedIndex);
+    }
+
+    private void EnableArrowButtons()
+    {
+        // Enable the arrow buttons for movement
+        for (int i = 0; i < arrowButtons.Length; i++)
+        {
+            arrowButtons[i].interactable = true;
+        }
+        Selectable[] selectables = arrowButtons[0].GetComponentsInChildren<Selectable>();
+        if (selectables.Length > 0)
+        {
+            EventSystem.current.SetSelectedGameObject(selectables[0].gameObject);
+        }
+    }
+
+    private void DisableArrowButtons()
+    {
+        // Disable the arrow buttons for movement
+        for (int i = 0; i < arrowButtons.Length; i++)
+        {
+            arrowButtons[i].interactable = false;
+        }
+
+        // Set the first button in buttonsContainer as the selected object
+        Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
+        if (buttons.Length > 0)
+        {
+            EventSystem.current.SetSelectedGameObject(buttons[0].gameObject);
+        }
     }
 }
