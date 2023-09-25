@@ -12,3 +12,6 @@ Key.m = Wiimote.Minus
 
 Key.o = Wiimote.One
 Key.t = Wiimote.Two
+
+Key.u = Wiimote.LookingAtRightPalm
+Key.r = Wiimote.LookingAtRightWatch
