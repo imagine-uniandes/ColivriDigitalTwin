@@ -9,6 +9,8 @@ public class CameraController : MonoBehaviour
     public float movementSpeed = 1f; // Speed of movement
     private Transform selectedGX;
     private int selectedIndex = -1; // Currently selected GX index
+    private Vector3 initialPosition; // Initial position of the selected GX
+    private Quaternion initialRotation; // Initial rotation of the selected GX
     private bool isRotatingLR = false; // Flag to track left-right rotation state
     private bool isRotatingUD = false; // Flag to track top-down rotation state
     private bool rotationDirectionInvertedLR = false; // Flag to track if rotation direction is inverted for left-right rotation
@@ -66,7 +68,7 @@ public class CameraController : MonoBehaviour
             // Go back to the selection menu with 'b'
             if (Input.GetKeyDown(KeyCode.B))
             {
-                DeselectGX();
+                RestoreInitialPositionAndRotation();
             }
         }
 
@@ -107,6 +109,10 @@ public class CameraController : MonoBehaviour
             selectedGX.gameObject.SetActive(true);
             selectedIndex = index;
 
+            // Store the initial position and rotation
+            initialPosition = selectedGX.position;
+            initialRotation = selectedGX.rotation;
+
             // Update the current rotation angles
             currentRotationY = selectedGX.eulerAngles.y;
             currentRotationX = selectedGX.eulerAngles.x;
@@ -124,5 +130,17 @@ public class CameraController : MonoBehaviour
             isRotatingLR = false;
             isRotatingUD = false;
         }
+    }
+
+    private void RestoreInitialPositionAndRotation()
+    {
+        // Restore the initial position and rotation
+        if (selectedGX != null)
+        {
+            selectedGX.position = initialPosition;
+            selectedGX.rotation = initialRotation;
+        }
+        // Reset GX
+        ActivateGX(selectedIndex);
     }
 }
