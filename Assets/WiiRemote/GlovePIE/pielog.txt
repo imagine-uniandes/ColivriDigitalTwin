@@ -1,0 +1,62 @@
+(0, 25-sep.-2023 01:00:11) Initializing PieLog
+(0, 25-sep.-2023 01:00:11) Initializing filemode variable
+(0, 25-sep.-2023 01:00:11) Initializing PieSpeech
+(0, 25-sep.-2023 01:00:11) Initializing PieVariables
+(0, 25-sep.-2023 01:00:11) Initializing PieCursorUnit
+(0, 25-sep.-2023 01:00:11) Initializing PieMouse
+(0, 25-sep.-2023 01:00:11) Initializing PieKeyboard
+(0, 25-sep.-2023 01:00:11) Initializing PieInput
+(0, 25-sep.-2023 01:00:11) Initializing PieOSC
+(0, 25-sep.-2023 01:00:11) Initializing PiePie
+(0, 25-sep.-2023 01:00:11) Initializing PieFunction
+(0, 25-sep.-2023 01:00:11) Initializing PieStatement
+(0, 25-sep.-2023 01:00:11) Initializing PieExpression
+(0, 25-sep.-2023 01:00:11) Initializing PieJoystick
+(0, 25-sep.-2023 01:00:11) Initializing PieP5
+(0, 25-sep.-2023 01:00:11) Initializing PieMidi
+(0, 25-sep.-2023 01:00:11) Initializing PiePPJoy
+(0, 25-sep.-2023 01:00:11) Initializing PieRemote
+(0, 25-sep.-2023 01:00:11) Initializing Pie Speech Recognition
+(0, 25-sep.-2023 01:00:11) Initializing PieScreen
+(0, 25-sep.-2023 01:00:11) GetMonitorEDID
+(0, 25-sep.-2023 01:00:11) Initializing PieWIndow
+(0, 25-sep.-2023 01:00:11) Initializing PieCursors
+(0, 25-sep.-2023 01:00:11) Initializing PieZ800
+(0, 25-sep.-2023 01:00:11) Initializing PieIntersense
+(0, 25-sep.-2023 01:00:11) Initializing PieFastrak
+(0, 25-sep.-2023 01:00:11) Initializing PiePPT
+(0, 25-sep.-2023 01:00:11) Initializing PieTrackIR
+(0, 25-sep.-2023 01:00:11) Initializing PiePinch
+(0, 25-sep.-2023 01:00:11) Initializing PieBird
+(0, 25-sep.-2023 01:00:11) Initializing PieFiveDT
+(0, 25-sep.-2023 01:00:11) Starting main
+(0, 25-sep.-2023 01:00:11) Application object initialized
+(0, 25-sep.-2023 01:00:11) Creating main window
+(0, 25-sep.-2023 01:00:12) EditorForm.Create
+(0, 25-sep.-2023 01:00:12) Checking command line parameters:
+(0, 25-sep.-2023 01:00:12) Creating debug window
+(0, 25-sep.-2023 01:00:12) Assigning exception handler
+(0, 25-sep.-2023 01:00:12) Creating debug remote control window
+(0, 25-sep.-2023 01:00:12) Running application
+(0, 25-sep.-2023 01:00:16) File>Open
+(0, 25-sep.-2023 01:00:33) ClearMidiGui
+(0, 25-sep.-2023 01:00:40) RunButton
+(0, 25-sep.-2023 01:00:40) Compile>Run
+(0, 25-sep.-2023 01:00:40) Compile>Compile
+(0, 25-sep.-2023 01:00:40) CompileCode
+(0, 25-sep.-2023 01:00:40) StartingInputMonitor CompileJoystick
+(0, 25-sep.-2023 01:00:40) EnumerateJoysticks
+(0, 25-sep.-2023 01:00:40) Enumerated... BadGamePad = False
+(0, 25-sep.-2023 01:00:40) StartCompileTimeP5 False
+(0, 25-sep.-2023 01:00:40) StoppingInputMonitor CompileJoystick
+(0, 25-sep.-2023 01:00:40) StartRuntime
+(0, 25-sep.-2023 01:00:40) StartKeyboardMonitor
+(0, 25-sep.-2023 01:00:40) StartingInputMonitor keyboard
+(0, 25-sep.-2023 01:00:40) StartRuntimeJoystick
+(0, 25-sep.-2023 01:00:40) ************************* False
+(0, 25-sep.-2023 01:00:41) StopButton
+(0, 25-sep.-2023 01:00:41) Compile>Stop
+(0, 25-sep.-2023 01:00:41) StopRuntime
+(0, 25-sep.-2023 01:00:41) StopKeyboardMonitor
+(0, 25-sep.-2023 01:00:41) StoppingInputMonitor Keyboard
+(0, 25-sep.-2023 01:00:41) StopRuntimeJoystick
