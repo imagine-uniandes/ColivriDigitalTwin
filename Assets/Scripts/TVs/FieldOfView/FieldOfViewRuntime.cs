@@ -1,9 +1,11 @@
 using UnityEngine;
-using System.Collections;
 
 public class FieldOfViewRuntime : MonoBehaviour
 {
     private FieldOfView fieldOfView;
+
+    // Reference to the line renderer prefab or material
+    public LineRenderer lineRendererPrefab;
 
     private void Start()
     {
@@ -11,13 +13,32 @@ public class FieldOfViewRuntime : MonoBehaviour
         fieldOfView = GetComponent<FieldOfView>();
     }
 
-    private void OnDrawGizmos()
+    private void Update()
     {
-        // Draw the red lines to visible targets during runtime
-        Gizmos.color = Color.red;
+        // Clear previous lines
+        ClearVisibleLines();
+
+        // Draw new lines to visible targets
         foreach (Transform visibleTarget in fieldOfView.visibleTargets)
         {
-            Gizmos.DrawLine(transform.position, visibleTarget.position);
+            DrawLineToTarget(visibleTarget);
         }
+    }
+
+    void ClearVisibleLines()
+    {
+        // Find and destroy existing line renderer objects
+        LineRenderer[] existingLines = GetComponentsInChildren<LineRenderer>();
+        foreach (var lineRenderer in existingLines)
+        {
+            Destroy(lineRenderer.gameObject);
+        }
+    }
+
+    void DrawLineToTarget(Transform target)
+    {
+        LineRenderer lineRenderer = Instantiate(lineRendererPrefab, transform);
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, target.position);
     }
 }
