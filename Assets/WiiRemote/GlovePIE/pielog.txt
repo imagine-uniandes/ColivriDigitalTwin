@@ -343,3 +343,34 @@
 (0, 25-sep.-2023 11:51:38) StopKeyboardMonitor
 (0, 25-sep.-2023 11:51:38) StoppingInputMonitor Keyboard
 (0, 25-sep.-2023 11:51:38) StopRuntimeJoystick
+(0, 25-sep.-2023 12:39:06) FormCloseQuery
+(0, 25-sep.-2023 12:39:06) Compile>Stop
+(0, 25-sep.-2023 12:39:06) Application finished
+(0, 25-sep.-2023 12:39:06) Destroying EditorForm
+(0, 25-sep.-2023 12:39:06) Finalizing PieFiveDT
+(0, 25-sep.-2023 12:39:06) Finalizing PieBird
+(0, 25-sep.-2023 12:39:06) Finalizing PiePinch
+(0, 25-sep.-2023 12:39:06) Finalizing PieTrackIR
+(0, 25-sep.-2023 12:39:06) Finalizing PiePPT
+(0, 25-sep.-2023 12:39:06) Finalizing PieFastrak
+(0, 25-sep.-2023 12:39:06) Finalizing PieIntersense
+(0, 25-sep.-2023 12:39:06) Finalizing PieZ800
+(0, 25-sep.-2023 12:39:06) Finalizing PieCursors
+(0, 25-sep.-2023 12:39:06) Finalizing PieWindow
+(0, 25-sep.-2023 12:39:06) Finalizing PieScreen
+(0, 25-sep.-2023 12:39:06) Finalizing Pie Speech Recognition
+(0, 25-sep.-2023 12:39:06) Finalizing PieRemote
+(0, 25-sep.-2023 12:39:06) Finalizing PiePPJoy
+(0, 25-sep.-2023 12:39:06) Finalizing PieMidi
+(0, 25-sep.-2023 12:39:06) Finalizing PieP5
+(0, 25-sep.-2023 12:39:06) Finalizing PieJoystick
+(0, 25-sep.-2023 12:39:06) Finalizing PieStatement
+(0, 25-sep.-2023 12:39:06) Finalizing PieFunction
+(0, 25-sep.-2023 12:39:06) Finalizing PiePie
+(0, 25-sep.-2023 12:39:06) Finalizing PieOSC
+(0, 25-sep.-2023 12:39:06) Finalizing PieKeyboard
+(0, 25-sep.-2023 12:39:06) Finalizing PieMouse
+(0, 25-sep.-2023 12:39:06) Finalizing PieVariables
+(0, 25-sep.-2023 12:39:06) Finalizing PieSpeech
+(0, 25-sep.-2023 12:39:06) Finalizing PieLog
+(0, 25-sep.-2023 12:39:06) Closing log file
