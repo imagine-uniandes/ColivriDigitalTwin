@@ -4,8 +4,11 @@ public class FieldOfViewRuntime : MonoBehaviour
 {
     private FieldOfView fieldOfView;
 
-    // Reference to the line renderer prefab or material
+    // Reference to the LineRenderer prefab
     public LineRenderer lineRendererPrefab;
+
+    // Material for the lines
+    public Material lineMaterial;
 
     private void Start()
     {
@@ -27,7 +30,7 @@ public class FieldOfViewRuntime : MonoBehaviour
 
     void ClearVisibleLines()
     {
-        // Find and destroy existing line renderer objects
+        // Find and destroy existing LineRenderer objects
         LineRenderer[] existingLines = GetComponentsInChildren<LineRenderer>();
         foreach (var lineRenderer in existingLines)
         {
@@ -38,6 +41,7 @@ public class FieldOfViewRuntime : MonoBehaviour
     void DrawLineToTarget(Transform target)
     {
         LineRenderer lineRenderer = Instantiate(lineRendererPrefab, transform);
+        lineRenderer.material = lineMaterial;
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, target.position);
     }

@@ -6,6 +6,8 @@ public class CameraController : MonoBehaviour
 {
     public GameObject mainCameraGroup;
     public GameObject buttonsContainer; // Use a single GameObject to hold all buttons
+    public Button button1;
+    public Button button2;
     public float rotationSpeed = 5f; // Speed of rotation in degrees per second
     public float movementSpeed = 1f; // Speed of movement
     public Button[] arrowButtons; // Array of arrow buttons
@@ -98,6 +100,17 @@ public class CameraController : MonoBehaviour
         {
             isRotatingUD = false;
         }
+
+        // Check for '1' key press to activate the top view GX and disable others
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ActivateLastGX();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            DisableLastGX();
+        }
     }
 
     private void ActivateMovement(int index)
@@ -152,7 +165,8 @@ public class CameraController : MonoBehaviour
     private void RestoreInitialPositionAndRotation()
     {
         // Restore the initial position and rotation
-        if (selectedGX != null)
+        int lastGXIndex = mainCameraGroup.transform.childCount - 1;
+        if (selectedGX != null && selectedGX != mainCameraGroup.transform.GetChild(lastGXIndex))
         {
             selectedGX.position = initialPosition;
             selectedGX.rotation = initialRotation;
@@ -197,5 +211,44 @@ public class CameraController : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(buttons[0].gameObject);
         }
+    }
+
+    private void ActivateLastGX()
+    {
+        // Deselect the current GX if one is selected
+        DeselectGX();
+
+        // Activate the last GX
+        int lastGXIndex = mainCameraGroup.transform.childCount - 1;
+        selectedGX = mainCameraGroup.transform.GetChild(lastGXIndex);
+        selectedGX.gameObject.SetActive(true);
+        selectedIndex = lastGXIndex;
+
+        // Disable all buttons except button2
+        Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
+        foreach (Button button in buttons)
+        {
+            button.interactable = false;
+        }
+        button1.interactable = false;
+        button2.interactable = true;
+    }
+
+    private void DisableLastGX()
+    {
+        // Enable the buttons within buttonsContainer when returning to the selection menu
+        Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
+        foreach (Button button in buttons)
+        {
+            button.interactable = true;
+        }
+
+        button1.interactable = true;
+        button2.interactable = false;
+
+        DeselectGX();
+        selectedIndex = 0;
+        selectedGX = mainCameraGroup.transform.GetChild(selectedIndex);
+        selectedGX.gameObject.SetActive(true);
     }
 }
