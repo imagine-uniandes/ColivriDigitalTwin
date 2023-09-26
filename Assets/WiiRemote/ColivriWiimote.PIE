@@ -1,0 +1,17 @@
+﻿Key.Up = Wiimote.Up
+Key.Down = Wiimote.Down
+Key.Left = Wiimote.Left
+Key.Right = Wiimote.Right
+
+Key.Enter = Wiimote.A
+Key.b = Wiimote.B
+
+Key.p = Wiimote.Plus
+Key.h = Wiimote.Home
+Key.m = Wiimote.Minus
+
+Key.One = Wiimote.One
+Key.Two = Wiimote.Two
+
+Key.u = Wiimote.LookingAtRightPalm
+Key.r = Wiimote.LookingAtRightWatch
