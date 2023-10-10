@@ -110,6 +110,11 @@ public class CameraController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             DisableLastGX();
+            Selectable[] selectables = buttonsContainer.GetComponentsInChildren<Selectable>();
+            if (selectables.Length > 0)
+            {
+                EventSystem.current.SetSelectedGameObject(selectables[0].gameObject);
+            }
         }
     }
 
