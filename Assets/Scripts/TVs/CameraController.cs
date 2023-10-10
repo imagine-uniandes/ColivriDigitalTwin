@@ -22,6 +22,10 @@ public class CameraController : MonoBehaviour
     private float currentRotationY = 0f; // Current rotation angle for left-right rotation
     private float currentRotationX = 0f; // Current rotation angle for top-down rotation
     private bool canMove = false; // Flag to allow movement when a button is clicked
+    public float fadeDuration = 0.5f; // Duration of the fade-in effect
+    private float fadeStartTime; // Start time of the fade-in effect
+    private bool isFading = false; // Flag to track if fading is in progress
+    private Camera[] cameras; // Array of cameras to adjust fading
 
     private void Start()
     {
@@ -43,6 +47,11 @@ public class CameraController : MonoBehaviour
         {
             // No GX is selected, return
             return;
+        }
+
+        if (isFading)
+        {
+            HandleFading();
         }
 
         if (isRotatingLR && canMove)
@@ -75,6 +84,7 @@ public class CameraController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.B))
             {
                 RestoreInitialPositionAndRotation();
+                StartFadeIn(selectedGX.gameObject);
             }
         }
 
@@ -132,6 +142,7 @@ public class CameraController : MonoBehaviour
             // Activate the selected GX
             selectedGX = mainCameraGroup.transform.GetChild(index);
             selectedGX.gameObject.SetActive(true);
+            StartFadeIn(selectedGX.gameObject);
             selectedIndex = index;
 
             // Store the initial position and rotation
@@ -227,6 +238,7 @@ public class CameraController : MonoBehaviour
         int lastGXIndex = mainCameraGroup.transform.childCount - 1;
         selectedGX = mainCameraGroup.transform.GetChild(lastGXIndex);
         selectedGX.gameObject.SetActive(true);
+        StartFadeIn(selectedGX.gameObject);
         selectedIndex = lastGXIndex;
 
         // Disable all buttons except button2
@@ -255,5 +267,37 @@ public class CameraController : MonoBehaviour
         selectedIndex = 0;
         selectedGX = mainCameraGroup.transform.GetChild(selectedIndex);
         selectedGX.gameObject.SetActive(true);
+    }
+
+    private void StartFadeIn(GameObject group)
+    {
+        // Get all the cameras within this GameObject
+        cameras = group.GetComponentsInChildren<Camera>();
+
+        // Initialize the cameras' far properties to 0
+        foreach (Camera camera in cameras)
+        {
+            camera.farClipPlane = 0f;
+        }
+        fadeStartTime = Time.time;
+        isFading = true;
+    }
+
+    private void HandleFading()
+    {
+        float elapsedTime = Time.time - fadeStartTime;
+        float alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
+
+        // Update the cameras' far properties to create the fade-in effect
+        foreach (Camera camera in cameras)
+        {
+            camera.farClipPlane = Mathf.Lerp(0f, 30f, alpha);
+        }
+
+        if (alpha >= 1f)
+        {
+            // Stop the fading effect when the fade is complete
+            isFading = false;
+        }
     }
 }
