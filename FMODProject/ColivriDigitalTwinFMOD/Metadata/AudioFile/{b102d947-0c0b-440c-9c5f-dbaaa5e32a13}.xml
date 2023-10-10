@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b102d947-0c0b-440c-9c5f-dbaaa5e32a13}">
+		<property name="assetPath">
+			<value>IR colivri.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.4129931972789116</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{57749f01-1606-4dfd-8426-76cdba8197f0}</destination>
+		</relationship>
+	</object>
+</objects>

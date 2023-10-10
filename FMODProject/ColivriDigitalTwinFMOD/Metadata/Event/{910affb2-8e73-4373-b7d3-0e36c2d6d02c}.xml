@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{910affb2-8e73-4373-b7d3-0e36c2d6d02c}">
 		<property name="name">
-			<value>quick-mechanical-keyboard-14391</value>
+			<value>KeyboardConvolution</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -112,6 +112,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{6e4789a4-398e-416b-b66a-483e6e7cf741}">
 		<relationship name="effects">
+			<destination>{bdd7c5f3-6800-456a-8a26-7bfd55a6e7ab}</destination>
 			<destination>{23721abf-0338-434f-b522-3d2dc3b053af}</destination>
 			<destination>{ca9a96ad-8ce0-4d4c-8c02-0e0c8ba929ba}</destination>
 		</relationship>
@@ -124,6 +125,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fea0ea65-d41c-4941-9934-55732fc469b7}" />
+	<object class="ConvolutionReverbEffect" id="{bdd7c5f3-6800-456a-8a26-7bfd55a6e7ab}">
+		<property name="endFrame">
+			<value>105980</value>
+		</property>
+		<relationship name="referenceableData">
+			<destination>{b102d947-0c0b-440c-9c5f-dbaaa5e32a13}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{23721abf-0338-434f-b522-3d2dc3b053af}" />
 	<object class="SpatialiserEffect" id="{ca9a96ad-8ce0-4d4c-8c02-0e0c8ba929ba}" />
 	<object class="MixerBusFader" id="{982024d0-87bf-4ed0-8391-74a7790907d7}" />
