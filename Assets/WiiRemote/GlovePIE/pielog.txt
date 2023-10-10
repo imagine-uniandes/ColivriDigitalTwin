@@ -188,3 +188,311 @@
 (0, 10-oct.-2023 10:29:14) StartingInputMonitor keyboard
 (0, 10-oct.-2023 10:29:14) StartRuntimeJoystick
 (0, 10-oct.-2023 10:29:14) ************************* False
+(0, 10-oct.-2023 12:15:12) StopButton
+(0, 10-oct.-2023 12:15:12) Compile>Stop
+(0, 10-oct.-2023 12:15:12) StopRuntime
+(0, 10-oct.-2023 12:15:12) StoppingInputMonitor Mouse
+(0, 10-oct.-2023 12:15:12) StopKeyboardMonitor
+(0, 10-oct.-2023 12:15:12) StoppingInputMonitor Keyboard
+(0, 10-oct.-2023 12:15:13) StopRuntimeJoystick
+(0, 10-oct.-2023 13:04:28) RunButton
+(0, 10-oct.-2023 13:04:28) Compile>Run
+(0, 10-oct.-2023 13:04:28) Compile>Compile
+(0, 10-oct.-2023 13:04:28) CompileCode
+(0, 10-oct.-2023 13:04:28) StartingInputMonitor CompileJoystick
+(0, 10-oct.-2023 13:04:28) EnumerateJoysticks
+(0, 10-oct.-2023 13:04:28) Enumerated... BadGamePad = False
+(0, 10-oct.-2023 13:04:28) StartCompileTimeP5 False
+(0, 10-oct.-2023 13:04:28) StoppingInputMonitor CompileJoystick
+(0, 10-oct.-2023 13:04:28) StartRuntime
+(0, 10-oct.-2023 13:04:28) StartingInputMonitor Mouse
+(0, 10-oct.-2023 13:04:28) StartKeyboardMonitor
+(0, 10-oct.-2023 13:04:28) StartingInputMonitor keyboard
+(0, 10-oct.-2023 13:04:31) StopButton
+(0, 10-oct.-2023 13:04:31) Compile>Stop
+(0, 10-oct.-2023 13:04:31) StopRuntime
+(0, 10-oct.-2023 13:04:31) StoppingInputMonitor Mouse
+(0, 10-oct.-2023 13:04:31) StopKeyboardMonitor
+(0, 10-oct.-2023 13:04:31) StoppingInputMonitor Keyboard
+(0, 10-oct.-2023 13:04:31) StopRuntimeJoystick
+(0, 10-oct.-2023 13:04:31) StartRuntimeJoystick
+(0, 10-oct.-2023 13:04:31) ************************* False
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:50) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:51) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:52) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:53) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:54) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) TWiimoteObject added to GlobalUpdateList
+(0, 10-oct.-2023 13:04:55) RunButton
+(0, 10-oct.-2023 13:04:55) Compile>Run
+(0, 10-oct.-2023 13:04:55) Compile>Compile
+(0, 10-oct.-2023 13:04:55) CompileCode
+(0, 10-oct.-2023 13:04:55) StartingInputMonitor CompileJoystick
+(0, 10-oct.-2023 13:04:55) EnumerateJoysticks
+(0, 10-oct.-2023 13:04:55) Enumerated... BadGamePad = False
+(0, 10-oct.-2023 13:04:55) StartCompileTimeP5 False
+(0, 10-oct.-2023 13:04:55) StoppingInputMonitor CompileJoystick
+(0, 10-oct.-2023 13:04:55) StartRuntime
+(0, 10-oct.-2023 13:04:55) StartingInputMonitor Mouse
+(0, 10-oct.-2023 13:04:55) StartKeyboardMonitor
+(0, 10-oct.-2023 13:04:55) StartingInputMonitor keyboard
+(0, 10-oct.-2023 13:04:55) StartRuntimeJoystick
+(0, 10-oct.-2023 13:04:55) ************************* False
+(0, 10-oct.-2023 13:05:28) StopButton
+(0, 10-oct.-2023 13:05:28) Compile>Stop
+(0, 10-oct.-2023 13:05:28) StopRuntime
+(0, 10-oct.-2023 13:05:28) StoppingInputMonitor Mouse
+(0, 10-oct.-2023 13:05:28) StopKeyboardMonitor
+(0, 10-oct.-2023 13:05:28) StoppingInputMonitor Keyboard
+(0, 10-oct.-2023 13:05:28) StopRuntimeJoystick
+(0, 10-oct.-2023 13:05:53) RunButton
+(0, 10-oct.-2023 13:05:53) Compile>Run
+(0, 10-oct.-2023 13:05:53) Compile>Compile
+(0, 10-oct.-2023 13:05:53) CompileCode
+(0, 10-oct.-2023 13:05:53) StartingInputMonitor CompileJoystick
+(0, 10-oct.-2023 13:05:53) EnumerateJoysticks
+(0, 10-oct.-2023 13:05:53) Enumerated... BadGamePad = False
+(0, 10-oct.-2023 13:05:53) StartCompileTimeP5 False
+(0, 10-oct.-2023 13:05:53) StoppingInputMonitor CompileJoystick
+(0, 10-oct.-2023 13:05:53) StartRuntime
+(0, 10-oct.-2023 13:05:53) StartingInputMonitor Mouse
+(0, 10-oct.-2023 13:05:53) StartKeyboardMonitor
+(0, 10-oct.-2023 13:05:53) StartingInputMonitor keyboard
+(0, 10-oct.-2023 13:05:53) StartRuntimeJoystick
+(0, 10-oct.-2023 13:05:53) ************************* False
+(0, 10-oct.-2023 13:06:31) StopButton
+(0, 10-oct.-2023 13:06:31) Compile>Stop
+(0, 10-oct.-2023 13:06:31) StopRuntime
+(0, 10-oct.-2023 13:06:31) StoppingInputMonitor Mouse
+(0, 10-oct.-2023 13:06:31) StopKeyboardMonitor
+(0, 10-oct.-2023 13:06:31) StoppingInputMonitor Keyboard
+(0, 10-oct.-2023 13:06:31) StopRuntimeJoystick
+(0, 10-oct.-2023 13:06:32) RunButton
+(0, 10-oct.-2023 13:06:32) Compile>Run
+(0, 10-oct.-2023 13:06:32) Compile>Compile
+(0, 10-oct.-2023 13:06:32) CompileCode
+(0, 10-oct.-2023 13:06:32) StartingInputMonitor CompileJoystick
+(0, 10-oct.-2023 13:06:32) EnumerateJoysticks
+(0, 10-oct.-2023 13:06:32) Enumerated... BadGamePad = False
+(0, 10-oct.-2023 13:06:32) StartCompileTimeP5 False
+(0, 10-oct.-2023 13:06:32) StoppingInputMonitor CompileJoystick
+(0, 10-oct.-2023 13:06:32) StartRuntime
+(0, 10-oct.-2023 13:06:32) StartingInputMonitor Mouse
+(0, 10-oct.-2023 13:06:32) StartKeyboardMonitor
+(0, 10-oct.-2023 13:06:32) StartingInputMonitor keyboard
+(0, 10-oct.-2023 13:06:32) StartRuntimeJoystick
+(0, 10-oct.-2023 13:06:32) ************************* False
+(0, 10-oct.-2023 13:09:37) StopButton
+(0, 10-oct.-2023 13:09:37) Compile>Stop
+(0, 10-oct.-2023 13:09:37) StopRuntime
+(0, 10-oct.-2023 13:09:37) StoppingInputMonitor Mouse
+(0, 10-oct.-2023 13:09:37) StopKeyboardMonitor
+(0, 10-oct.-2023 13:09:37) StoppingInputMonitor Keyboard
+(0, 10-oct.-2023 13:09:38) StopRuntimeJoystick
+(0, 10-oct.-2023 13:09:39) FormCloseQuery
+(0, 10-oct.-2023 13:09:39) Compile>Stop
+(0, 10-oct.-2023 13:09:39) Application finished
+(0, 10-oct.-2023 13:09:39) Destroying EditorForm
+(0, 10-oct.-2023 13:09:39) Finalizing PieFiveDT
+(0, 10-oct.-2023 13:09:39) Finalizing PieBird
+(0, 10-oct.-2023 13:09:39) Finalizing PiePinch
+(0, 10-oct.-2023 13:09:39) Finalizing PieTrackIR
+(0, 10-oct.-2023 13:09:39) Finalizing PiePPT
+(0, 10-oct.-2023 13:09:39) Finalizing PieFastrak
+(0, 10-oct.-2023 13:09:39) Finalizing PieIntersense
+(0, 10-oct.-2023 13:09:39) Finalizing PieZ800
+(0, 10-oct.-2023 13:09:39) Finalizing PieCursors
+(0, 10-oct.-2023 13:09:39) Finalizing PieWindow
+(0, 10-oct.-2023 13:09:39) Finalizing PieScreen
+(0, 10-oct.-2023 13:09:39) Finalizing Pie Speech Recognition
+(0, 10-oct.-2023 13:09:39) Finalizing PieRemote
+(0, 10-oct.-2023 13:09:39) Finalizing PiePPJoy
+(0, 10-oct.-2023 13:09:39) Finalizing PieMidi
+(0, 10-oct.-2023 13:09:39) Finalizing PieP5
+(0, 10-oct.-2023 13:09:39) Finalizing PieJoystick
+(0, 10-oct.-2023 13:09:39) Finalizing PieStatement
+(0, 10-oct.-2023 13:09:39) Finalizing PieFunction
+(0, 10-oct.-2023 13:09:39) Finalizing PiePie
+(0, 10-oct.-2023 13:09:39) Finalizing PieOSC
+(0, 10-oct.-2023 13:09:39) Finalizing PieKeyboard
+(0, 10-oct.-2023 13:09:39) Finalizing PieMouse
+(0, 10-oct.-2023 13:09:39) Finalizing PieVariables
+(0, 10-oct.-2023 13:09:39) Finalizing PieSpeech
+(0, 10-oct.-2023 13:09:39) Finalizing PieLog
+(0, 10-oct.-2023 13:09:39) Closing log file
