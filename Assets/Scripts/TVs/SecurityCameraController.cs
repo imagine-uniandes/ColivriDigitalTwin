@@ -7,7 +7,7 @@ public class SecurityCameraController : MonoBehaviour
     public float rotationSpeed = 5f;
     public float movementSpeed = 1f;
     private Camera[] cameras;
-    private Transform SelectedCamera;
+    private Transform selectedCameraParent;
     private int selectedIndex = -1;
     private bool isRotatingLR = false;
     private bool isRotatingUD = false;
@@ -36,7 +36,7 @@ public class SecurityCameraController : MonoBehaviour
 
     private void Update()
     {
-        if (cameras == null || cameras.Length == 0)
+        if (cameras == null || cameras.Length == 0 || selectedCameraParent == null)
         {
             return;
         }
@@ -45,13 +45,13 @@ public class SecurityCameraController : MonoBehaviour
         {
             float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedLR ? -1f : 1f);
             currentRotationY += step;
-            SelectedCamera.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
+            selectedCameraParent.rotation = Quaternion.Euler(0f, currentRotationY, 0f);
         }
         else if (isRotatingUD && canMove)
         {
             float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedUD ? -1f : 1f);
             currentRotationX += step;
-            SelectedCamera.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
+            selectedCameraParent.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
         }
         else if (canMove)
         {
@@ -61,7 +61,7 @@ public class SecurityCameraController : MonoBehaviour
             if (Mathf.Abs(horizontalInput) > 0.1f || Mathf.Abs(verticalInput) > 0.1f)
             {
                 Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * movementSpeed * Time.deltaTime;
-                SelectedCamera.Translate(movement);
+                selectedCameraParent.Translate(movement);
             }
         }
 
@@ -109,6 +109,7 @@ public class SecurityCameraController : MonoBehaviour
                     camera.gameObject.SetActive(false);
                 }
                 cameras[cameras.Length - 1].gameObject.SetActive(true);
+                selectedCameraParent = cameras[cameras.Length - 1].transform.parent;
                 selectedIndex = cameras.Length - 1;
                 canMove = true;
             }
@@ -121,6 +122,7 @@ public class SecurityCameraController : MonoBehaviour
         cameras[selectedIndex].gameObject.SetActive(false);
         selectedIndex = (selectedIndex - 1 + cameras.Length) % cameras.Length;
         cameras[selectedIndex].gameObject.SetActive(true);
+        selectedCameraParent = cameras[selectedIndex].transform.parent;
     }
 
     private void SwitchToNextSecurityCamera()
@@ -129,5 +131,6 @@ public class SecurityCameraController : MonoBehaviour
         cameras[selectedIndex].gameObject.SetActive(false);
         selectedIndex = (selectedIndex + 1) % cameras.Length;
         cameras[selectedIndex].gameObject.SetActive(true);
+        selectedCameraParent = cameras[selectedIndex].transform.parent;
     }
 }
