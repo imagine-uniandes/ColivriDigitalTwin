@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HeaderPanelNavigation : MonoBehaviour
 {
@@ -7,6 +8,10 @@ public class HeaderPanelNavigation : MonoBehaviour
     private int selectedIndex = 0;
     public GameObject homePanel;
     [SerializeField] private GameObject[] panelsToHide;
+
+    private bool isHeld = false;
+    private float holdTimer = 0f;
+    private float holdDuration = 3f; // 3 seconds hold duration for reset
 
     private void Update()
     {
@@ -22,17 +27,44 @@ public class HeaderPanelNavigation : MonoBehaviour
             headerButtons[selectedIndex].Select();
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKey(KeyCode.H))
         {
-            if (homePanel != null)
+            isHeld = true;
+            holdTimer += Time.deltaTime;
+            if (holdTimer >= holdDuration)
             {
-                homePanel.SetActive(true);
-                // Hide all other panels
-                foreach (var panel in panelsToHide)
+                ResetGame();
+            }
+        }
+        else
+        {
+            if (isHeld)
+            {
+                isHeld = false;
+                if (holdTimer < holdDuration)
                 {
-                    if (panel != null)
-                        panel.SetActive(false);
+                    HomeAction();
                 }
+                holdTimer = 0f;
+            }
+        }
+    }
+
+    private void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void HomeAction()
+    {
+        if (homePanel != null)
+        {
+            homePanel.SetActive(true);
+            // Hide all other panels
+            foreach (var panel in panelsToHide)
+            {
+                if (panel != null)
+                    panel.SetActive(false);
             }
         }
     }
