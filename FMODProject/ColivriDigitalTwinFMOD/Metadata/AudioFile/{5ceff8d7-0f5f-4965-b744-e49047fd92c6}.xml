@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5ceff8d7-0f5f-4965-b744-e49047fd92c6}">
+		<property name="assetPath">
+			<value>quick-mechanical-keyboard-14391.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.146938775510204</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{57749f01-1606-4dfd-8426-76cdba8197f0}</destination>
+		</relationship>
+	</object>
+</objects>
