@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PCStatsVisualizer : MonoBehaviour
 {
@@ -7,17 +8,21 @@ public class PCStatsVisualizer : MonoBehaviour
     public TextMeshProUGUI ramUsageText;
     public TextMeshProUGUI diskUsageText;
 
+    public Image cpuImage;
+    public Image ramImage;
+    public Image diskImage;
+
     [System.Serializable]
     public class PCStatsData
     {
-        public string CPUUsage;
-        public string RAMUsage;
-        public string DiskUsage;
+        public float CPUUsage;
+        public float RAMUsage;
+        public float DiskUsage;
     }
 
     private PCStatsData statsData;
 
-    private string json = "{\"CPUUsage\": \"21.2%\", \"RAMUsage\": \"78.1%\", \"DiskUsage\": \"94.8%\"}";
+    private string json = "{\"CPUUsage\": 31.2, \"RAMUsage\": 78.1, \"DiskUsage\": 64.8}";
 
     private void Start()
     {
@@ -38,7 +43,6 @@ public class PCStatsVisualizer : MonoBehaviour
         UpdateUIWithJSONData();
     }
 
-
     private void UpdateUIWithJSONData()
     {
         if (json != null)
@@ -47,11 +51,23 @@ public class PCStatsVisualizer : MonoBehaviour
 
             if (statsData != null)
             {
-                cpuUsageText.text = "Uso de CPU: " + statsData.CPUUsage;
-                ramUsageText.text = "Uso de RAM: " + statsData.RAMUsage;
-                diskUsageText.text = "Uso de disco: " + statsData.DiskUsage;
+                cpuUsageText.text = "Uso de CPU: " + statsData.CPUUsage.ToString("F1") + "%";
+                ramUsageText.text = "Uso de RAM: " + statsData.RAMUsage.ToString("F1") + "%";
+                diskUsageText.text = "Uso de disco: " + statsData.DiskUsage.ToString("F1") + "%";
 
-                // TODO: graph
+                // Get RectTransform from the image components
+                RectTransform cpuRectTransform = cpuImage.GetComponent<RectTransform>();
+                RectTransform ramRectTransform = ramImage.GetComponent<RectTransform>();
+                RectTransform diskRectTransform = diskImage.GetComponent<RectTransform>();
+
+                if (cpuRectTransform != null)
+                    cpuRectTransform.offsetMax = new Vector2(800 * (statsData.CPUUsage / 100f), cpuRectTransform.offsetMax.y);
+
+                if (ramRectTransform != null)
+                    ramRectTransform.offsetMax = new Vector2(800 * (statsData.RAMUsage / 100f), ramRectTransform.offsetMax.y);
+
+                if (diskRectTransform != null)
+                    diskRectTransform.offsetMax = new Vector2(800 * (statsData.DiskUsage / 100f), diskRectTransform.offsetMax.y);
             }
         }
     }
