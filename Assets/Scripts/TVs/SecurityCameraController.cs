@@ -28,6 +28,11 @@ public class SecurityCameraController : MonoBehaviour
 
     private void OnDisable()
     {
+        foreach (var camera in cameras)
+        {
+            camera.gameObject.SetActive(true);
+        }
+
         if (coverageView != null)
         {
             coverageView.SetActive(false);
