@@ -6,10 +6,9 @@ public class SecurityCameraController : MonoBehaviour
     public GameObject securityCameraGroup;
     public float rotationSpeed = 5f;
     public float movementSpeed = 1f;
-    private Transform selectedGX;
+    private Camera[] cameras;
+    private Transform SelectedCamera;
     private int selectedIndex = -1;
-    private Vector3 initialPosition;
-    private Quaternion initialRotation;
     private bool isRotatingLR = false;
     private bool isRotatingUD = false;
     private bool rotationDirectionInvertedLR = false;
@@ -24,7 +23,7 @@ public class SecurityCameraController : MonoBehaviour
         {
             coverageView.SetActive(true);
         }
-        ActivateLastGX();
+        ActivateLastCamera();
     }
 
     private void OnDisable()
@@ -37,7 +36,7 @@ public class SecurityCameraController : MonoBehaviour
 
     private void Update()
     {
-        if (selectedGX == null)
+        if (cameras == null || cameras.Length == 0)
         {
             return;
         }
@@ -46,13 +45,13 @@ public class SecurityCameraController : MonoBehaviour
         {
             float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedLR ? -1f : 1f);
             currentRotationY += step;
-            selectedGX.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
+            SelectedCamera.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
         }
         else if (isRotatingUD && canMove)
         {
             float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedUD ? -1f : 1f);
             currentRotationX += step;
-            selectedGX.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
+            SelectedCamera.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
         }
         else if (canMove)
         {
@@ -62,7 +61,7 @@ public class SecurityCameraController : MonoBehaviour
             if (Mathf.Abs(horizontalInput) > 0.1f || Mathf.Abs(verticalInput) > 0.1f)
             {
                 Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * movementSpeed * Time.deltaTime;
-                selectedGX.Translate(movement);
+                SelectedCamera.Translate(movement);
             }
         }
 
@@ -98,21 +97,19 @@ public class SecurityCameraController : MonoBehaviour
         }
     }
 
-private void ActivateLastGX()
+    private void ActivateLastCamera()
     {
-        DeselectGX();
         if (securityCameraGroup != null && securityCameraGroup.transform.childCount > 0)
         {
-            int lastGXIndex = securityCameraGroup.transform.childCount - 1;
-            selectedGX = securityCameraGroup.transform.GetChild(lastGXIndex);
-            if (selectedGX != null)
+            cameras = securityCameraGroup.GetComponentsInChildren<Camera>();
+            if (cameras.Length > 0)
             {
-                selectedGX.gameObject.SetActive(true);
-                selectedIndex = lastGXIndex;
-                initialPosition = selectedGX.position;
-                initialRotation = selectedGX.rotation;
-                currentRotationY = selectedGX.eulerAngles.y;
-                currentRotationX = selectedGX.eulerAngles.x;
+                foreach (var camera in cameras)
+                {
+                    camera.gameObject.SetActive(false);
+                }
+                cameras[cameras.Length - 1].gameObject.SetActive(true);
+                selectedIndex = cameras.Length - 1;
                 canMove = true;
             }
         }
@@ -120,49 +117,17 @@ private void ActivateLastGX()
 
     private void SwitchToPreviousSecurityCamera()
     {
-        int totalCameras = securityCameraGroup.transform.childCount;
-        int previousIndex = (selectedIndex - 1 + totalCameras) % totalCameras;
-        SelectSecurityCamera(previousIndex);
+        if (cameras == null || cameras.Length == 0) return;
+        cameras[selectedIndex].gameObject.SetActive(false);
+        selectedIndex = (selectedIndex - 1 + cameras.Length) % cameras.Length;
+        cameras[selectedIndex].gameObject.SetActive(true);
     }
 
     private void SwitchToNextSecurityCamera()
     {
-        int totalCameras = securityCameraGroup.transform.childCount;
-        int nextIndex = (selectedIndex + 1) % totalCameras;
-        SelectSecurityCamera(nextIndex);
-    }
-
-    private void SelectSecurityCamera(int index)
-    {
-        DeselectGX();
-        selectedGX = securityCameraGroup.transform.GetChild(index);
-        Camera selectedCamera = selectedGX.GetComponent<Camera>();
-        if (selectedCamera != null)
-        {
-            selectedCamera.enabled = true;
-        }
-        selectedIndex = index;
-        initialPosition = selectedGX.position;
-        initialRotation = selectedGX.rotation;
-        currentRotationY = selectedGX.eulerAngles.y;
-        currentRotationX = selectedGX.eulerAngles.x;
-        canMove = true;
-    }
-
-    private void DeselectGX()
-    {
-        if (selectedGX != null)
-        {
-            Camera selectedCamera = selectedGX.GetComponent<Camera>();
-            if (selectedCamera != null)
-            {
-                selectedCamera.enabled = false;
-            }
-            selectedGX.gameObject.SetActive(false);
-            selectedGX = null;
-            selectedIndex = -1;
-            isRotatingLR = false;
-            isRotatingUD = false;
-        }
+        if (cameras == null || cameras.Length == 0) return;
+        cameras[selectedIndex].gameObject.SetActive(false);
+        selectedIndex = (selectedIndex + 1) % cameras.Length;
+        cameras[selectedIndex].gameObject.SetActive(true);
     }
 }
