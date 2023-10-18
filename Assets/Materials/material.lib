@@ -1,0 +1,107 @@
+# Aspose.3D Wavefront OBJ Exporter
+# Copyright 2004-2023 Aspose Pty Ltd.
+# File created: 10/10/2023 18:39:49
+
+newmtl Wolf3D_Eye
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 1
+	Pm 0
+	d 1
+	Tr 0
+	map_Kd texture_1.jpg
+newmtl Wolf3D_Eye
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 1
+	Pm 0
+	d 1
+	Tr 0
+	map_Kd texture_1.jpg
+newmtl Wolf3D_Skin
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 0.69999998807907104
+	Pm 0
+	d 1
+	Tr 0
+	map_Kd texture_2.jpg
+newmtl Wolf3D_Teeth
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 1
+	Pm 0
+	d 1
+	Tr 0
+	map_Kd texture_3.jpg
+newmtl Wolf3D_Body
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 0.69824093580245968
+	Pm 0
+	d 1
+	Tr 0
+	map_Kd texture_4.jpg
+	norm texture_5.jpg
+newmtl Wolf3D_Outfit_Bottom
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 1
+	Pm 0
+	d 1
+	Tr 0
+	map_Kd texture_6.jpg
+	map_Pr texture_7.jpg
+	map_Pm texture_7.jpg
+	norm texture_8.jpg
+newmtl Wolf3D_Outfit_Footwear
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 1
+	Pm 1
+	d 1
+	Tr 0
+	map_Kd texture_9.jpg
+	map_Pr texture_10.jpg
+	map_Pm texture_10.jpg
+	norm texture_11.jpg
+newmtl Wolf3D_Outfit_Top
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 1
+	Pm 1
+	d 1
+	Tr 0
+	map_Kd texture_12.jpg
+	map_Pr texture_13.jpg
+	map_Pm texture_13.jpg
+	norm texture_14.jpg
+newmtl Wolf3D_Hair
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 0.86363637447357184
+	Pm 0
+	d 1
+	Tr 0
+	map_Kd texture_15.jpg
+	norm texture_16.jpg
+newmtl Wolf3D_Glasses
+	illum 2
+	Kd 1 1 1
+	Ke 0 0 0
+	Pr 1
+	Pm 1
+	d 1
+	Tr 0
+	map_Kd texture_17.png
+	map_Pr texture_18.png
+	map_Pm texture_18.png

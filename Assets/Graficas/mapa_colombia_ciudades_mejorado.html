@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a33e88b62da90289bbc1092dfd644c09 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a33e88b62da90289bbc1092dfd644c09" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a33e88b62da90289bbc1092dfd644c09 = L.map(
+                "map_a33e88b62da90289bbc1092dfd644c09",
+                {
+                    center: [4.5709, -74.2973],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f9ae8ebf416de2839d8f3fe49aacf0a3 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+    
+            var marker_a2997ae4220df5246c614141f85ac8a7 = L.marker(
+                [4.6097, -74.0817],
+                {}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+    
+            var icon_7db37c7ca192286874f6e12587cba941 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a2997ae4220df5246c614141f85ac8a7.setIcon(icon_7db37c7ca192286874f6e12587cba941);
+        
+    
+            marker_a2997ae4220df5246c614141f85ac8a7.bindTooltip(
+                `<div>
+                     Bogotá
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0d208fd9973adb2e63a17ce6418c01fe = L.marker(
+                [11.2404, -74.2115],
+                {}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+    
+            var icon_68f0575fefde2acca3af5f9c8d99650c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0d208fd9973adb2e63a17ce6418c01fe.setIcon(icon_68f0575fefde2acca3af5f9c8d99650c);
+        
+    
+            marker_0d208fd9973adb2e63a17ce6418c01fe.bindTooltip(
+                `<div>
+                     UniMagdalena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e1795f13dfd3c1bdd060a4cf2c6880a5 = L.marker(
+                [11.4734, -72.5361],
+                {}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+    
+            var icon_fca1bb9da7c27e9c76de52d7ac08c465 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e1795f13dfd3c1bdd060a4cf2c6880a5.setIcon(icon_fca1bb9da7c27e9c76de52d7ac08c465);
+        
+    
+            marker_e1795f13dfd3c1bdd060a4cf2c6880a5.bindTooltip(
+                `<div>
+                     Universidad de La Guajira
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4762f4a8d58fc7348d706005ba0b0a47 = L.marker(
+                [6.2442, -75.5812],
+                {}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+    
+            var icon_07b6d051f51849514ebba22e102a4623 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_4762f4a8d58fc7348d706005ba0b0a47.setIcon(icon_07b6d051f51849514ebba22e102a4623);
+        
+    
+            marker_4762f4a8d58fc7348d706005ba0b0a47.bindTooltip(
+                `<div>
+                     FUCN
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fb2ed6ab28a9f061f18935925ded9395 = L.marker(
+                [4.6097, -74.0817],
+                {}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+    
+            var icon_a8c53b13b3ae6ead06eda5086b9fa1a7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fb2ed6ab28a9f061f18935925ded9395.setIcon(icon_a8c53b13b3ae6ead06eda5086b9fa1a7);
+        
+    
+        var popup_5bbe5f5de308a548828d6e8fdb3c2b62 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b6e59831e26ba254229464f11def91d2 = $(`<div id="html_b6e59831e26ba254229464f11def91d2" style="width: 100.0%; height: 100.0%;"><strong>Bogotá</strong><br>Centro del Vivero Virtual</div>`)[0];
+                popup_5bbe5f5de308a548828d6e8fdb3c2b62.setContent(html_b6e59831e26ba254229464f11def91d2);
+            
+        
+
+        marker_fb2ed6ab28a9f061f18935925ded9395.bindPopup(popup_5bbe5f5de308a548828d6e8fdb3c2b62)
+        ;
+
+        
+    
+    
+            var marker_5f51e23635bd92772d8172aac0560a71 = L.marker(
+                [11.2404, -74.2115],
+                {}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+    
+            var icon_e5a0025894cbe0f79c3ab908ead33b1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5f51e23635bd92772d8172aac0560a71.setIcon(icon_e5a0025894cbe0f79c3ab908ead33b1b);
+        
+    
+        var popup_446d1044f873331b5fde518716172e79 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2b7b19c719949033cb6f425a908e68a = $(`<div id="html_d2b7b19c719949033cb6f425a908e68a" style="width: 100.0%; height: 100.0%;"><strong>UniMagdalena</strong><br>Lab XR</div>`)[0];
+                popup_446d1044f873331b5fde518716172e79.setContent(html_d2b7b19c719949033cb6f425a908e68a);
+            
+        
+
+        marker_5f51e23635bd92772d8172aac0560a71.bindPopup(popup_446d1044f873331b5fde518716172e79)
+        ;
+
+        
+    
+    
+            var marker_97bf781469ede635b3920c5405c3bc84 = L.marker(
+                [11.4734, -72.5361],
+                {}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+    
+            var icon_a82fd7e4c4d91bcfe551c1e69070169b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_97bf781469ede635b3920c5405c3bc84.setIcon(icon_a82fd7e4c4d91bcfe551c1e69070169b);
+        
+    
+        var popup_e966b8b0648aaea31f1f96ed26c478ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6617d0cadaade673811e948977ac0ead = $(`<div id="html_6617d0cadaade673811e948977ac0ead" style="width: 100.0%; height: 100.0%;"><strong>La Guajira</strong><br>Lab Xr</div>`)[0];
+                popup_e966b8b0648aaea31f1f96ed26c478ea.setContent(html_6617d0cadaade673811e948977ac0ead);
+            
+        
+
+        marker_97bf781469ede635b3920c5405c3bc84.bindPopup(popup_e966b8b0648aaea31f1f96ed26c478ea)
+        ;
+
+        
+    
+    
+            var marker_4d7a2555f428784efa8bba3149b19d48 = L.marker(
+                [6.2442, -75.5812],
+                {}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+    
+            var icon_bef3563cd33c932087a2971e1f8d7581 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_4d7a2555f428784efa8bba3149b19d48.setIcon(icon_bef3563cd33c932087a2971e1f8d7581);
+        
+    
+        var popup_8adbe3f325e1944d756788002417b2ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b610831923d9e6cd0102414a0c312f0 = $(`<div id="html_0b610831923d9e6cd0102414a0c312f0" style="width: 100.0%; height: 100.0%;"><strong>Medellín</strong><br>Lab XR</div>`)[0];
+                popup_8adbe3f325e1944d756788002417b2ec.setContent(html_0b610831923d9e6cd0102414a0c312f0);
+            
+        
+
+        marker_4d7a2555f428784efa8bba3149b19d48.bindPopup(popup_8adbe3f325e1944d756788002417b2ec)
+        ;
+
+        
+    
+    
+            var layer_control_282f05ad053f984906f04cd14c194504 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f9ae8ebf416de2839d8f3fe49aacf0a3,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_282f05ad053f984906f04cd14c194504.base_layers,
+                layer_control_282f05ad053f984906f04cd14c194504.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_a33e88b62da90289bbc1092dfd644c09);
+        
+</script>
+</html>
