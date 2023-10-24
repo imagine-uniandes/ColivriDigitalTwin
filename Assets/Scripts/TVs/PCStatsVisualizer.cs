@@ -1,6 +1,9 @@
 using UnityEngine;
+using UnityEngine.Networking;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PCStatsVisualizer : MonoBehaviour
 {
@@ -20,40 +23,74 @@ public class PCStatsVisualizer : MonoBehaviour
         public float DiskUsage;
     }
 
-    private PCStatsData statsData;
+    private List<PCStatsData> allStatsData = new List<PCStatsData>();
 
-    private string json = "{\"CPUUsage\": 31.2, \"RAMUsage\": 78.1, \"DiskUsage\": 64.8}";
+    private string baseURL = "http://18.188.1.225:8080/data/";
 
     private void Start()
     {
-        UpdateUIWithJSONData();
-        InvokeRepeating("SimulateDataUpdate", 2f, 2f); // Simulate data update every 2 seconds
+        StartCoroutine(GetAllData());
+        InvokeRepeating("GetAllData", 30f, 30f);
     }
 
-    private void SimulateDataUpdate()
+    private IEnumerator GetAllData()
     {
-        // Simulate minor changes in the JSON data
-        // For the sake of demonstration, let's simulate some changes
-        float cpuUsage = Random.Range(20f, 25f);
-        float ramUsage = Random.Range(77f, 79f);
-        float diskUsage = Random.Range(94f, 95f);
-
-        json = "{\"CPUUsage\": \"" + cpuUsage.ToString("F1") + "%\", \"RAMUsage\": \"" + ramUsage.ToString("F1") + "%\", \"DiskUsage\": \"" + diskUsage.ToString("F1") + "%\"}";
-
-        UpdateUIWithJSONData();
-    }
-
-    private void UpdateUIWithJSONData()
-    {
-        if (json != null)
+        for (int i = 1; i <= 24; i++)
         {
-            statsData = JsonUtility.FromJson<PCStatsData>(json);
+            UnityWebRequest www = UnityWebRequest.Get(baseURL + i);
+            yield return www.SendWebRequest();
 
-            if (statsData != null)
+            if (www.result != UnityWebRequest.Result.Success)
             {
-                cpuUsageText.text = "Uso de CPU: " + statsData.CPUUsage.ToString("F1") + "%";
-                ramUsageText.text = "Uso de RAM: " + statsData.RAMUsage.ToString("F1") + "%";
-                diskUsageText.text = "Uso de disco: " + statsData.DiskUsage.ToString("F1") + "%";
+                Debug.Log(www.error);
+            }
+            else
+            {
+                string json = www.downloadHandler.text;
+                PCStatsData statsData = JsonUtility.FromJson<PCStatsData>(json);
+                allStatsData.Add(statsData);
+            }
+
+            CalculateAndDisplayAverage();
+        }
+
+        void CalculateAndDisplayAverage()
+        {
+            if (allStatsData.Count > 0)
+            {
+                float avgCPU = 0f;
+                float avgRAM = 0f;
+                float avgDisk = 0f;
+
+                foreach (var data in allStatsData)
+                {
+                    avgCPU += data.CPUUsage;
+                    avgRAM += data.RAMUsage;
+                    avgDisk += data.DiskUsage;
+                }
+
+                avgCPU /= allStatsData.Count;
+                avgRAM /= allStatsData.Count;
+                avgDisk /= allStatsData.Count;
+
+                PCStatsData avgData = new PCStatsData
+                {
+                    CPUUsage = avgCPU,
+                    RAMUsage = avgRAM,
+                    DiskUsage = avgDisk
+                };
+
+                UpdateUIWithJSONData(avgData);
+            }
+        }
+
+        void UpdateUIWithJSONData(PCStatsData data)
+        {
+            if (data != null)
+            {
+                cpuUsageText.text = "Uso de CPU: " + data.CPUUsage.ToString("F1") + "%";
+                ramUsageText.text = "Uso de RAM: " + data.RAMUsage.ToString("F1") + "%";
+                diskUsageText.text = "Uso de disco: " + data.DiskUsage.ToString("F1") + "%";
 
                 // Get RectTransform from the image components
                 RectTransform cpuRectTransform = cpuImage.GetComponent<RectTransform>();
@@ -61,13 +98,13 @@ public class PCStatsVisualizer : MonoBehaviour
                 RectTransform diskRectTransform = diskImage.GetComponent<RectTransform>();
 
                 if (cpuRectTransform != null)
-                    cpuRectTransform.offsetMax = new Vector2(800 * (statsData.CPUUsage / 100f), cpuRectTransform.offsetMax.y);
+                    cpuRectTransform.offsetMax = new Vector2(800 * (data.CPUUsage / 100f), cpuRectTransform.offsetMax.y);
 
                 if (ramRectTransform != null)
-                    ramRectTransform.offsetMax = new Vector2(800 * (statsData.RAMUsage / 100f), ramRectTransform.offsetMax.y);
+                    ramRectTransform.offsetMax = new Vector2(800 * (data.RAMUsage / 100f), ramRectTransform.offsetMax.y);
 
                 if (diskRectTransform != null)
-                    diskRectTransform.offsetMax = new Vector2(800 * (statsData.DiskUsage / 100f), diskRectTransform.offsetMax.y);
+                    diskRectTransform.offsetMax = new Vector2(800 * (data.DiskUsage / 100f), diskRectTransform.offsetMax.y);
             }
         }
     }
