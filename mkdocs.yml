@@ -1,0 +1,5 @@
+site_name: Colivri Digital Twin
+theme:
+  name: 'material'
+
+repo_url: https://github.com/imagine-uniandes/ColivriDigitalTwin
