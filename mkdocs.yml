@@ -3,3 +3,17 @@ theme:
   name: 'material'
 
 repo_url: https://github.com/imagine-uniandes/ColivriDigitalTwin
+repo_name: ColivriDigitalTwin
+
+extra_css:
+  - css/styles.css
+
+nav:
+  - Home: index.md
+  - About:
+    - 'About the Project': about_project.md
+    - 'About the Team': about_team.md
+  - Getting Started:
+    - 'Installation': download.md
+    - 'Quick Start': quickstart.md
+  - Development: development.md
