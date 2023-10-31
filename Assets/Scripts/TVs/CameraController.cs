@@ -28,6 +28,7 @@ public class CameraController : MonoBehaviour
     private PlayerInput playerInput;
     private InputAction rotationAction;
     private InputAction zoomAction;
+    private bool returnPressedOnce = false;
 
     private void Awake()
     {
@@ -92,11 +93,22 @@ public class CameraController : MonoBehaviour
             Vector3 move = new Vector3(0, 0, zoom);
             mainCameraGroup.transform.Translate(move);
 
-            // Go back to the selection menu with 'b'
-            if (Input.GetKeyDown(KeyCode.B))
+            // Go back to the selection menu
+            if (canMove)
             {
-                RestoreInitialPositionAndRotation();
-                StartFadeIn(selectedGX.gameObject);
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    if (!returnPressedOnce)
+                    {
+                        returnPressedOnce = true;
+                    }
+                    else
+                    {
+                        RestoreInitialPositionAndRotation();
+                        StartFadeIn(selectedGX.gameObject);
+                        returnPressedOnce = false;
+                    }
+                }
             }
         }
     }
