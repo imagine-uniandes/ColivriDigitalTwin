@@ -8,6 +8,12 @@ using UnityEngine.Networking;
 public class ScreenshotTaker : MonoBehaviour
 {
     private string serverURL = "SERVER_URL"; // TODO: Replace with server URL
+    private float interval = 900f; // 15 minutes in seconds
+
+    private void Start()
+    {
+        InvokeRepeating("TakeAndSendScreenshots", 0f, interval);
+    }
 
     public void TakeAndSendScreenshots()
     {
