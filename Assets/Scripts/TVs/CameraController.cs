@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour
 
     private void Awake()
     {
-        playerInput = GetComponent<PlayerInput>();
+        playerInput = GetComponentInParent<PlayerInput>();
         if (playerInput == null)
         {
             Debug.LogError("PlayerInput component not found. Please attach the PlayerInput component to this GameObject.");
