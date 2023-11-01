@@ -4,7 +4,7 @@ using System.Collections;
 
 public class MoveObjectFromEndpoint : MonoBehaviour
 {
-    public string endpointURL = "http://18.188.1.225:8080/data/metapro";
+    public string endpointURL = "http://172.24.100.110:8080/data/metapro";
     public GameObject objectToMove;
     private Vector3 targetPosition;
 

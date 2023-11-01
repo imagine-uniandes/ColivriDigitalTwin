@@ -30,7 +30,7 @@ public class PCStatsVisualizer : MonoBehaviour
 
     private List<PCStatsData> allStatsData = new List<PCStatsData>();
 
-    private string baseURL = "http://18.188.1.225:8080/data/";
+    private string baseURL = "http://172.24.100.110:8080/data/";
 
     private void OnEnable()
     {
