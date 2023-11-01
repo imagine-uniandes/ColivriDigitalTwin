@@ -6,13 +6,14 @@ public class PositionSender : MonoBehaviour
 {
     private string serverURL;
     private string computerID;
+    public float updateInterval = 15f;
+    private bool isApplicationPaused = false;
 
-    // TODO: instead do it on enable
-    private void Start()
+    private void OnEnable()
     {
         computerID = gameObject.name;
-        serverURL = "http://18.188.1.225:8080/data/" + computerID;
-        SendPositionData();
+        serverURL = "http://172.24.100.110:8080/data/control-center-" + computerID;
+        InvokeRepeating("SendPositionData", 0f, 15f);
     }
 
     private void SendPositionData()
@@ -26,14 +27,17 @@ public class PositionSender : MonoBehaviour
 
     private IEnumerator PostPosition(string json)
     {
-        UnityWebRequest www = UnityWebRequest.PostWwwForm(serverURL, json);
-        www.SetRequestHeader("Content-Type", "application/json");
+        UnityWebRequest request = new UnityWebRequest(serverURL, "POST");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json);
+        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
 
-        yield return www.SendWebRequest();
+        yield return request.SendWebRequest();
 
-        if (www.result != UnityWebRequest.Result.Success)
+        if (request.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log(www.error);
+            Debug.Log("Error sending position data: " + request.error);
         }
         else
         {
