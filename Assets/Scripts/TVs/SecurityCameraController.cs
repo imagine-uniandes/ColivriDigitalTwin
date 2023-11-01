@@ -1,4 +1,8 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.InputSystem.Users;
 
 public class SecurityCameraController : MonoBehaviour
 {
@@ -16,6 +20,20 @@ public class SecurityCameraController : MonoBehaviour
     private float currentRotationY = 0f;
     private float currentRotationX = 0f;
     private bool canMove = false;
+    private PlayerInput playerInput;
+    private InputAction rotationAction;
+    private InputAction zoomAction;
+
+    private void Awake()
+    {
+        playerInput = GetComponentInParent<PlayerInput>();
+        if (playerInput == null)
+        {
+            Debug.LogError("PlayerInput component not found. Please attach the PlayerInput component to this GameObject.");
+        }
+        rotationAction = playerInput.actions["Rotation"];
+        zoomAction = playerInput.actions["Zoom"];
+    }
 
     private void OnEnable()
     {
@@ -46,19 +64,7 @@ public class SecurityCameraController : MonoBehaviour
             return;
         }
 
-        if (isRotatingLR && canMove)
-        {
-            float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedLR ? -1f : 1f);
-            currentRotationY += step;
-            selectedCameraParent.rotation = Quaternion.Euler(0f, currentRotationY, 0f);
-        }
-        else if (isRotatingUD && canMove)
-        {
-            float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedUD ? -1f : 1f);
-            currentRotationX += step;
-            selectedCameraParent.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
-        }
-        else if (canMove)
+        if (canMove)
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
@@ -68,35 +74,22 @@ public class SecurityCameraController : MonoBehaviour
                 Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * movementSpeed * Time.deltaTime;
                 selectedCameraParent.Translate(movement);
             }
+
+            // Rotate with joystick
+            float Rx = rotationAction.ReadValue<Vector3>().x * rotationSpeed * Time.deltaTime;
+            float Ry = rotationAction.ReadValue<Vector3>().y * rotationSpeed * Time.deltaTime;
+            float Rz = rotationAction.ReadValue<Vector3>().z * rotationSpeed * Time.deltaTime;
+            float zoom = zoomAction.ReadValue<float>() * movementSpeed * Time.deltaTime;
+
+            // Rotate the camera based on joystick input
+            selectedCameraParent.Rotate(Rx, Ry, Rz);
+
+            // Zoom in/out with the Z axis
+            Vector3 move = new Vector3(0, 0, zoom);
+            selectedCameraParent.transform.Translate(move);
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && canMove)
-        {
-            isRotatingLR = true;
-            rotationDirectionInvertedLR = !rotationDirectionInvertedLR;
-        }
-        else if (Input.GetKeyDown(KeyCode.U) && canMove)
-        {
-            isRotatingUD = true;
-            rotationDirectionInvertedUD = !rotationDirectionInvertedUD;
-        }
-
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            isRotatingLR = false;
-        }
-
-        if (Input.GetKeyUp(KeyCode.U))
-        {
-            isRotatingUD = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SwitchToPreviousSecurityCamera();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             SwitchToNextSecurityCamera();
         }

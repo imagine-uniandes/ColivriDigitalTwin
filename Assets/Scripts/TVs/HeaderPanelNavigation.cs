@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class HeaderPanelNavigation : MonoBehaviour
 {
@@ -9,63 +10,58 @@ public class HeaderPanelNavigation : MonoBehaviour
     public GameObject homePanel;
     [SerializeField] private GameObject[] panelsToHide;
 
-    private bool isHeld = false;
-    private float holdTimer = 0f;
-    private float holdDuration = 3f; // 3 seconds hold duration for reset
+    private bool isHeldM = false;
+    private float holdTimerM = 0f;
+    private float holdDurationM = 3f; // 3 seconds hold duration for going back to home
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKey(KeyCode.M))
         {
-            selectedIndex = Mathf.Max(0, selectedIndex - 1);
-            headerButtons[selectedIndex].Select();
-        }
-
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            selectedIndex = Mathf.Min(headerButtons.Length - 1, selectedIndex + 1);
-            headerButtons[selectedIndex].Select();
-        }
-
-        if (Input.GetKey(KeyCode.H))
-        {
-            isHeld = true;
-            holdTimer += Time.deltaTime;
-            if (holdTimer >= holdDuration)
+            isHeldM = true;
+            holdTimerM += Time.deltaTime;
+            if (holdTimerM >= holdDurationM)
             {
-                ResetGame();
+                GoBackToHome();
             }
         }
         else
         {
-            if (isHeld)
+            if (isHeldM)
             {
-                isHeld = false;
-                if (holdTimer < holdDuration)
+                isHeldM = false;
+                if (holdTimerM < holdDurationM)
                 {
-                    HomeAction();
+                    selectedIndex = (selectedIndex + 1) % headerButtons.Length;
+                    headerButtons[selectedIndex].Select();
                 }
-                holdTimer = 0f;
+                holdTimerM = 0f;
             }
         }
     }
 
-    private void ResetGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    private void HomeAction()
+    private void GoBackToHome()
     {
         if (homePanel != null)
         {
             homePanel.SetActive(true);
+            SelectDefaultButton(homePanel);
             // Hide all other panels
             foreach (var panel in panelsToHide)
             {
                 if (panel != null)
                     panel.SetActive(false);
             }
+        }
+    }
+
+    private void SelectDefaultButton(GameObject targetPanel)
+    {
+        // Get the first selectable element in the panel
+        Selectable[] selectables = targetPanel.GetComponentsInChildren<Selectable>();
+        if (selectables.Length > 0)
+        {
+            EventSystem.current.SetSelectedGameObject(selectables[0].gameObject);
         }
     }
 }
