@@ -91,7 +91,7 @@ The ColivriDigitalTwin project is being developed by a dedicated team, including
       Vivian Gómez Cubillos
     </td>
     <td align="center">
-      Juan Esteban Rodriguez
+      Juan Esteban Rodríguez
     </td>
   </tr>
   <tr>
@@ -116,7 +116,7 @@ The ColivriDigitalTwin project is being developed by a dedicated team, including
       Melissa Lizeth Contreras Rojas
     </td>
     <td align="center">
-      Juan Sebastian Alegría Zúñiga
+      Juan Sebastián Alegría Zúñiga
     </td>
     <td align="center">
       Julian Camilo Mora Valbuena
