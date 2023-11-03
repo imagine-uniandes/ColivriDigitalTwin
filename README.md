@@ -65,12 +65,90 @@ To get started with the project, please refer to the [official development docum
 
 The ColivriDigitalTwin project is being developed by a dedicated team, including:
 
-- Pablo Figueroa Forero: Associate Professor
-- Vivian Gómez Cubillos: Instructor Professor & Colivri Lab Coordinator
-- Juan Esteban Rodriguez
-- Melissa Lizeth Contreras Rojas
-- Juan Sebastian Alegria Zuñiga
-- Julian Camilo Mora Valbuena
-- Nicolas Falla Bernal
-- Valentina Uribe
-- Abel Arismendy
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/pablo-figueroa-uniandes">
+        <img src="https://github.com/pablo-figueroa-uniandes.png" width="100" height="100" style="border-radius:50%">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/VivianGomez">
+        <img src="https://github.com/VivianGomez.png" width="100" height="100" style="border-radius:50%">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/Juanes1516">
+        <img src="https://github.com/Juanes1516.png" width="100" height="100" style="border-radius:50%">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Pablo Figueroa Forero
+    </td>
+    <td align="center">
+      Vivian Gómez Cubillos
+    </td>
+    <td align="center">
+      Juan Esteban Rodriguez
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/Mecon0710">
+        <img src="https://github.com/Mecon0710.png" width="100" height="100" style="border-radius:50%">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/zejiran">
+        <img src="https://github.com/zejiran.png" width="100" height="100" style="border-radius:50%">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/julian27m">
+        <img src="https://github.com/julian27m.png" width="100" height="100" style="border-radius:50%">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Melissa Lizeth Contreras Rojas
+    </td>
+    <td align="center">
+      Juan Sebastian Alegría Zúñiga
+    </td>
+    <td align="center">
+      Julian Camilo Mora Valbuena
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/nFei">
+        <img src="https://github.com/nFei.png" width="100" height="100" style="border-radius:50%">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/Valentina1125">
+        <img src="https://github.com/Valentina1125.png" width="100" height="100" style="border-radius:50%">
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/abelarismendy">
+        <img src="https://github.com/abelarismendy.png" width="100" height="100" style="border-radius:50%">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      Nicolas Falla Bernal
+    </td>
+    <td align="center">
+      Valentina Uribe
+    </td>
+    <td align="center">
+      Abel Arismendy
+    </td>
+  </tr>
+</table>
+
