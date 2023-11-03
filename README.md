@@ -152,3 +152,9 @@ The ColivriDigitalTwin project is being developed by a dedicated team, including
   </tr>
 </table>
 
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](LICENSE)**
+- Copyright 2023 © Grupo Imagine Uniandes
