@@ -1,4 +1,4 @@
-# ColivriDigitalTwin
+# Colivri Digital Twin
 
 ## About the Project
 
