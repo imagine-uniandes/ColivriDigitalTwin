@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 5
+  m_CurrentQuality: 0
   m_QualitySettings:
   - serializedVersion: 3
     name: Very Low
@@ -17,20 +17,20 @@ QualitySettings:
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
-    shadowmaskMode: 0
-    skinWeights: 1
-    globalTextureMipmapLimit: 1
+    shadowmaskMode: 1
+    skinWeights: 4
+    globalTextureMipmapLimit: 0
     textureMipmapLimitSettings: []
-    anisotropicTextures: 0
+    anisotropicTextures: 2
     antiAliasing: 0
     softParticles: 0
     softVegetation: 0
-    realtimeReflectionProbes: 0
-    billboardsFaceCameraPosition: 0
+    realtimeReflectionProbes: 1
+    billboardsFaceCameraPosition: 1
     useLegacyDetailDistribution: 1
-    vSyncCount: 0
-    realtimeGICPUUsage: 25
-    lodBias: 0.3
+    vSyncCount: 1
+    realtimeGICPUUsage: 100
+    lodBias: 2
     maximumLODLevel: 0
     enableLODCrossFade: 1
     streamingMipmapsActive: 0
@@ -39,12 +39,12 @@ QualitySettings:
     streamingMipmapsRenderersPerFrame: 512
     streamingMipmapsMaxLevelReduction: 2
     streamingMipmapsMaxFileIORequests: 1024
-    particleRaycastBudget: 4
+    particleRaycastBudget: 4096
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: 35baea7658777f94db1c27264a505f21, type: 2}
+    customRenderPipeline: {fileID: 0}
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -312,7 +312,7 @@ QualitySettings:
     Stadia: 5
     Standalone: 5
     WebGL: 3
-    Windows Store Apps: 5
+    Windows Store Apps: 0
     XboxOne: 5
     iPhone: 2
     tvOS: 2
