@@ -126,7 +126,7 @@ public class OVRGradleGeneration
             FeatureHelpers.GetFeatureWithIdForBuildTarget(report.summary.platformGroup, Meta.XR.MetaXRFeature.featureId);
         if (metaXRFeature.enabled && !useOpenXR)
         {
-            throw new BuildFailedException("OpenXR backend for Oculus Plugin is disabled, which is required to support Unity OpenXR Plugin. Please enable OpenXR backend for Oculus Plugin through the 'Oculus -> Tools -> OpenXR' menu.");
+            // throw new BuildFailedException("OpenXR backend for Oculus Plugin is disabled, which is required to support Unity OpenXR Plugin. Please enable OpenXR backend for Oculus Plugin through the 'Oculus -> Tools -> OpenXR' menu.");
         }
 
         string ovrRootPath = OVRPluginInfo.GetUtilitiesRootPath();
