@@ -11,7 +11,7 @@ public class ComputerDynamicData
     public string RAMUsage;
     public string DiskUsage;
 }
-
+     
 public class ServerDataFetcher : MonoBehaviour
 {
     public TextMeshPro[] cpuTextMeshes; // Array de TextMeshPro para CPU
