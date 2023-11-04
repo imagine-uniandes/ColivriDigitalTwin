@@ -15,4 +15,4 @@ MonoBehaviour:
   colorSpace: 7
   hasSentConsentEvent: 1
   hasSetTelemetryEnabled: 1
-  telemetryEnabled: 0
+  telemetryEnabled: 1
