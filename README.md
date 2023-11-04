@@ -61,6 +61,14 @@ In the context of Augmented Reality, the project enables users to view additiona
 
 To get started with the project, please refer to the [official development documentation](https://imagine-uniandes.github.io/ColivriDigitalTwin/development/) for detailed information on the project structure, setup instructions, and development guidelines.
 
+## Using the Space Mouse Compact Controller with the TVs Screen
+
+To use the Space Mouse Compact Controller with the TV screens in the ColivriDigitalTwin project, follow these steps:
+
+1. Download the drivers of the device from the official website: [3Dconnexion Drivers](https://3dconnexion.com/us/drivers/).
+2. Download vJoy, a virtual joystick driver, from the following link: [vJoy on SourceForge](https://sourceforge.net/projects/vjoystick/).
+3. Follow the instructions provided in the GitHub repository for the integration: [Sx2vJoy-test GitHub Repository](https://github.com/Lasse-B/Sx2vJoy-test).
+
 ## Development Team
 
 The ColivriDigitalTwin project is being developed by a dedicated team, including:
