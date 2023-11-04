@@ -68,6 +68,8 @@ To use the Space Mouse Compact Controller with the TV screens in the ColivriDigi
 1. Download the drivers of the device from the official website: [3Dconnexion Drivers](https://3dconnexion.com/us/drivers/).
 2. Download vJoy, a virtual joystick driver, from the following link: [vJoy on SourceForge](https://sourceforge.net/projects/vjoystick/).
 3. Follow the instructions provided in the GitHub repository for the integration: [Sx2vJoy-test GitHub Repository](https://github.com/Lasse-B/Sx2vJoy-test).
+4. Disable the 3Dconnexion KMJ Emulator to prevent conflicts with executions. You can find a guide on how to disable it in this [tutorial](https://wrw.is/how-to-disable-the-3dconnexion-kmj-emulator-game-controller-to-fix-conflicts/).
+5. Configure the buttons on the 3Dconnexion controller as follows: set the left button as "M" and the right button as "Enter" for optimal functionality.
 
 ## Development Team
 
