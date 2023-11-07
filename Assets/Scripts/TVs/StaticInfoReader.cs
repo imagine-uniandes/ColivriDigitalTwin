@@ -10,7 +10,7 @@ public class StaticInfoReader : MonoBehaviour
     public GameObject staticInfoPanel;
     public GameObject statsPanel;
     public TextMeshProUGUI displayText;
-    private List<Dictionary<string, string>> data = new List<Dictionary<string, string>>();
+    private List<Dictionary<string, string>> dataList = new List<Dictionary<string, string>>();
     private int currentIndex = 0;
     private bool isStaticPanelEnabled = false;
     private float inputCooldown = 0.2f;
@@ -31,8 +31,8 @@ public class StaticInfoReader : MonoBehaviour
 
     void LoadDataFromCSV()
     {
-        string filePath = "Assets/Resources/StaticPCInfo.csv";
-        string[] lines = File.ReadAllLines(filePath);
+        TextAsset textAsset = Resources.Load("StaticPCInfo") as TextAsset;
+        string[] lines = textAsset.text.Split('\n');
 
         string[] headers = lines[0].Split(',');
         for (int i = 1; i < lines.Length; i++)
@@ -43,13 +43,13 @@ public class StaticInfoReader : MonoBehaviour
             {
                 entry[headers[j]] = values[j];
             }
-            data.Add(entry);
+            dataList.Add(entry);
         }
     }
 
     void DisplayCurrentPC()
     {
-        Dictionary<string, string> currentPC = data[currentIndex];
+        Dictionary<string, string> currentPC = dataList[currentIndex];
         displayText.text = $"<b>PC {currentIndex}\n</b>";
         foreach (var kvp in currentPC)
         {
@@ -72,7 +72,7 @@ public class StaticInfoReader : MonoBehaviour
                     isStaticPanelEnabled = true;
                 }
 
-                currentIndex = (currentIndex + 1) % data.Count;
+                currentIndex = (currentIndex + 1) % dataList.Count;
                 DisplayCurrentPC();
                 lastInputTime = Time.time;
             }
@@ -85,7 +85,7 @@ public class StaticInfoReader : MonoBehaviour
                     isStaticPanelEnabled = true;
                 }
 
-                currentIndex = (currentIndex - 1 + data.Count) % data.Count;
+                currentIndex = (currentIndex - 1 + dataList.Count) % dataList.Count;
                 DisplayCurrentPC();
                 lastInputTime = Time.time;
             }
