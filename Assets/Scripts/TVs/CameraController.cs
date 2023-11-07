@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.InputSystem.Users;
 
 public class CameraController : MonoBehaviour
 {
@@ -15,10 +18,6 @@ public class CameraController : MonoBehaviour
     private int selectedIndex = -1; // Currently selected GX index
     private Vector3 initialPosition; // Initial position of the selected GX
     private Quaternion initialRotation; // Initial rotation of the selected GX
-    private bool isRotatingLR = false; // Flag to track left-right rotation state
-    private bool isRotatingUD = false; // Flag to track top-down rotation state
-    private bool rotationDirectionInvertedLR = false; // Flag to track if rotation direction is inverted for left-right rotation
-    private bool rotationDirectionInvertedUD = false; // Flag to track if rotation direction is inverted for top-down rotation
     private float currentRotationY = 0f; // Current rotation angle for left-right rotation
     private float currentRotationX = 0f; // Current rotation angle for top-down rotation
     private bool canMove = false; // Flag to allow movement when a button is clicked
@@ -26,6 +25,21 @@ public class CameraController : MonoBehaviour
     private float fadeStartTime; // Start time of the fade-in effect
     private bool isFading = false; // Flag to track if fading is in progress
     private Camera[] cameras; // Array of cameras to adjust fading
+    private PlayerInput playerInput;
+    private InputAction rotationAction;
+    private InputAction zoomAction;
+    private bool returnPressedOnce = false;
+
+    private void Awake()
+    {
+        playerInput = GetComponentInParent<PlayerInput>();
+        if (playerInput == null)
+        {
+            Debug.LogError("PlayerInput component not found. Please attach the PlayerInput component to this GameObject.");
+        }
+        rotationAction = playerInput.actions["Rotation"];
+        zoomAction = playerInput.actions["Zoom"];
+    }
 
     private void Start()
     {
@@ -54,21 +68,7 @@ public class CameraController : MonoBehaviour
             HandleFading();
         }
 
-        if (isRotatingLR && canMove)
-        {
-            // Rotate left-right (yaw)
-            float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedLR ? -1f : 1f);
-            currentRotationY += step;
-            selectedGX.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
-        }
-        else if (isRotatingUD && canMove)
-        {
-            // Rotate top-down (pitch)
-            float step = rotationSpeed * Time.deltaTime * (rotationDirectionInvertedUD ? -1f : 1f);
-            currentRotationX += step;
-            selectedGX.rotation = Quaternion.Euler(currentRotationX, currentRotationY, 0f);
-        }
-        else if (canMove)
+        if (canMove)
         {
             // Move GX with arrow keys only when the keys are pressed
             float horizontalInput = Input.GetAxis("Horizontal");
@@ -80,50 +80,35 @@ public class CameraController : MonoBehaviour
                 selectedGX.Translate(movement);
             }
 
-            // Go back to the selection menu with 'b'
-            if (Input.GetKeyDown(KeyCode.B))
+            // Rotate with joystick
+            float Rx = rotationAction.ReadValue<Vector3>().x * rotationSpeed * Time.deltaTime;
+            float Ry = rotationAction.ReadValue<Vector3>().y * rotationSpeed * Time.deltaTime;
+            float Rz = rotationAction.ReadValue<Vector3>().z * rotationSpeed * Time.deltaTime;
+            float zoom = zoomAction.ReadValue<float>() * movementSpeed * Time.deltaTime;
+
+            // Rotate the camera based on joystick input
+            selectedGX.Rotate(Rx, Ry, Rz);
+
+            // Zoom in/out with the Z axis
+            Vector3 move = new Vector3(0, 0, zoom);
+            mainCameraGroup.transform.Translate(move);
+
+            // Go back to the selection menu
+            if (canMove)
             {
-                RestoreInitialPositionAndRotation();
-                StartFadeIn(selectedGX.gameObject);
-            }
-        }
-
-        // Check for 'r' and 'u' key presses to toggle rotation direction and reset inversion flags
-        if (Input.GetKeyDown(KeyCode.R) && canMove)
-        {
-            isRotatingLR = true;
-            rotationDirectionInvertedLR = !rotationDirectionInvertedLR; // Invert rotation direction
-        }
-        else if (Input.GetKeyDown(KeyCode.U) && canMove)
-        {
-            isRotatingUD = true;
-            rotationDirectionInvertedUD = !rotationDirectionInvertedUD; // Invert rotation direction
-        }
-
-        // Check for 'r' and 'u' key releases to stop rotation
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            isRotatingLR = false;
-        }
-
-        if (Input.GetKeyUp(KeyCode.U))
-        {
-            isRotatingUD = false;
-        }
-
-        // Check for '1' key press to activate the top view GX and disable others
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            ActivateLastGX();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            DisableLastGX();
-            Selectable[] selectables = buttonsContainer.GetComponentsInChildren<Selectable>();
-            if (selectables.Length > 0)
-            {
-                EventSystem.current.SetSelectedGameObject(selectables[0].gameObject);
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    if (!returnPressedOnce)
+                    {
+                        returnPressedOnce = true;
+                    }
+                    else
+                    {
+                        RestoreInitialPositionAndRotation();
+                        StartFadeIn(selectedGX.gameObject);
+                        returnPressedOnce = false;
+                    }
+                }
             }
         }
     }
@@ -173,8 +158,6 @@ public class CameraController : MonoBehaviour
             selectedGX.gameObject.SetActive(false);
             selectedGX = null;
             selectedIndex = -1;
-            isRotatingLR = false;
-            isRotatingUD = false;
         }
     }
 
