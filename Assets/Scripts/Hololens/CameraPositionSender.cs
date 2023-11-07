@@ -91,6 +91,9 @@ public class CameraPositionSender : MonoBehaviour
 
             // Convierte el objeto en JSON
             string json = JsonUtility.ToJson(data);
+            Debug.Log("CAMERA X: " + cameraPosition.x);
+            Debug.Log("CAMERA Y: " + cameraPosition.y);
+            Debug.Log("CAMERA Z: " + cameraPosition.z);
 
             // Envía el JSON al servidor
             StartCoroutine(SendDataToServer(json));

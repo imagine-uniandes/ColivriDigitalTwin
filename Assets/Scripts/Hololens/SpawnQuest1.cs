@@ -60,7 +60,7 @@ public class SpawnQuest1 : MonoBehaviour
                     objectToSpawn.SetActive(true);
 
                     // Establece la posición y rotación de destino
-                    targetPosition = new Vector3(xPos - 9.678f, yPos + 0.2f, zPos - 6.785f);
+                    targetPosition = new Vector3(xPos, yPos, zPos);
                     targetRotation = Quaternion.Euler(rotx, roty, rotz);
                 }
             }

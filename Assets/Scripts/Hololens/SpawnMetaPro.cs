@@ -60,7 +60,7 @@ public class SpawnMetaPro : MonoBehaviour
                     objectToSpawn.SetActive(true);
 
                     // Establece la posición y rotación de destino
-                    targetPosition = new Vector3(zPos + 5.2f, yPos - 6.8f, -xPos - 9.2f);
+                    targetPosition = new Vector3(zPos, yPos, -xPos);
                     targetRotation = Quaternion.Euler(rotx, roty + 90f, rotz);
                 }
             }
