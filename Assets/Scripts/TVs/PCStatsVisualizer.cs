@@ -157,11 +157,32 @@ public class PCStatsVisualizer : MonoBehaviour
 
     private void UpdatePanelWithPCData(PCStatsData data, int pcIndex)
     {
-        string pcData = $"PC {pcIndex}: \nCPU Usage: {data.CPUUsage.ToString("F1")}%\nRAM Usage: {data.RAMUsage.ToString("F1")}%\nDisk Usage: {data.DiskUsage.ToString("F1")}%\n\n";
+        string pcData = $"PC {pcIndex}: \nCPU: {GetBar(data.CPUUsage)}\nRAM: {GetBar(data.RAMUsage)}\nDisco: {GetBar(data.DiskUsage)}\n\n";
         int panelIndex = (pcIndex - 1) / 2;
         if (panelIndex < panelTexts.Length)
         {
             panelTexts[panelIndex].text += pcData;
         }
+    }
+
+    private string GetBar(float percentage)
+    {
+        int barLength = (int)(percentage / 5);
+        string bar = "";
+
+        for (int i = 0; i < 20; i++)
+        {
+            if (i < barLength)
+            {
+                bar += "|";
+            }
+            else
+            {
+                bar += "-";
+            }
+        }
+
+        bar += $" {percentage:F0}%";
+        return bar;
     }
 }
