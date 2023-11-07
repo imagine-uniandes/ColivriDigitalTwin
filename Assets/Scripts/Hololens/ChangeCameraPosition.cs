@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+ï»¿using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -7,10 +7,11 @@ public class ChangeCameraPosition : MonoBehaviour
     public GameObject mrtkXRRig;
     public GameObject slatePiso1;
     public GameObject slateSotano1;
+    public GameObject cameraMain;
 
-    public Vector3 position1 = new Vector3(9.60200024f, 0.740999997f, 6.83500004f);
-    public Vector3 positionS1 = new Vector3(11.6829996f, -3.98600006f, 4.21999979f);
-    public Transform cameraTransform = Camera.main.transform;
+    public Vector3 position1 = new Vector3(9.602f, 2.341f, 6.835f);
+    public Vector3 positionS1 = new Vector3(11.68F, -2.386f, 4.22f);
+    
 
 
     public void CamaraPiso1()
@@ -21,10 +22,10 @@ public class ChangeCameraPosition : MonoBehaviour
 
             //Debug.Log("RIG: " + cameraTransform.position.y);
 
-            if (mrtkXRRig.transform.position.y <= 0f)
+            if (cameraMain.transform.position.y <= 0f)
             {
-                // Cambia la posición del objeto MRTK XR Rig para ir al piso 1
-                
+                // Cambia la posiciÃ³n del objeto MRTK XR Rig para ir al piso 1
+
                 mrtkXRRig.transform.position = position1;
             }
             else
@@ -51,9 +52,9 @@ public class ChangeCameraPosition : MonoBehaviour
 
            
 
-            if (cameraTransform.position.y >= 0)
+            if (cameraMain.transform.position.y >= 0)
             {
-                // Cambia la posición del objeto MRTK XR Rig para ir al sótano 1
+                // Cambia la posiciÃ³n del objeto MRTK XR Rig para ir al sÃ³tano 1
                 //Debug.Log("RIG: " + cameraTransform.position.y);
                 mrtkXRRig.transform.position = positionS1;
             }
