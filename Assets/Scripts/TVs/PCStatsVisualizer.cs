@@ -76,17 +76,26 @@ public class PCStatsVisualizer : MonoBehaviour
             UnityWebRequest www = UnityWebRequest.Get(baseURL + i);
             yield return www.SendWebRequest();
 
+            PCStatsData statsData;
+
             if (www.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(www.error);
+                statsData = new PCStatsData
+                {
+                    CPUUsage = 0f,
+                    RAMUsage = 0f,
+                    DiskUsage = 0f
+                };
             }
             else
             {
                 string json = www.downloadHandler.text;
-                PCStatsData statsData = JsonUtility.FromJson<PCStatsData>(json);
-                allStatsData.Add(statsData);
-                UpdatePanelWithPCData(statsData, i);
+                statsData = JsonUtility.FromJson<PCStatsData>(json);
             }
+
+            allStatsData.Add(statsData);
+            UpdatePanelWithPCData(statsData, i);
 
             CalculateAndDisplayAverage();
         }
