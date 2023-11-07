@@ -26,6 +26,7 @@ public class ChairTracking : MonoBehaviour
     private float startingX;
     private float startingY;
     private float startingR;
+    private float firstR;
 
     private float prevX = 0;
     private float prevY = 0;
@@ -60,6 +61,7 @@ public class ChairTracking : MonoBehaviour
 
                     startingPosition = objectTracked.transform.localPosition;
                     startingRotation = objectTracked.transform.eulerAngles;
+                    firstR = startingRotation.y;
                     Debug.Log("Starting rotation: " + startingRotation);
                     Debug.Log("Starting position: " + startingPosition);
                 } else {
@@ -81,9 +83,10 @@ public class ChairTracking : MonoBehaviour
                         prevX = x;
                         prevY = y;
                     } else {
-                        objectTracked.transform.localPosition = new Vector3(startingPosition.x - x, startingPosition.y, startingPosition.z + y);
-                        Vector3 rotationAmount = new Vector3(startingRotation.x, startingRotation.y - r, startingRotation.z);
+                        objectTracked.transform.localPosition = new Vector3(startingPosition.x - y, startingPosition.y, startingPosition.z - x);
+                        Vector3 rotationAmount = new Vector3(startingRotation.x, firstR + currentR, startingRotation.z);
                         objectTracked.transform.eulerAngles = rotationAmount;
+                        firstR = firstR + currentR;
                         prevX = x;
                         prevY = y;
                         prevR = r;

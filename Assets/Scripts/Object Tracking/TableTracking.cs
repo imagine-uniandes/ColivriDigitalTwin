@@ -26,6 +26,7 @@ public class TableTracking : MonoBehaviour
     private float startingX;
     private float startingY;
     private float startingR;
+    private float firstR;
 
     private float prevX = 0;
     private float prevY = 0;
@@ -60,6 +61,7 @@ public class TableTracking : MonoBehaviour
 
                     startingPosition = objectTracked.transform.localPosition;
                     startingRotation = objectTracked.transform.eulerAngles;
+                    firstR = startingRotation.y;
                     Debug.Log(startingRotation);
                 } else {
 
@@ -81,8 +83,9 @@ public class TableTracking : MonoBehaviour
                         prevY = y;
                     } else {
                         objectTracked.transform.localPosition = new Vector3(startingPosition.x - x, startingPosition.y, startingPosition.z + y);
-                        Vector3 rotationAmount = new Vector3(startingRotation.x, startingRotation.y - r, startingRotation.z);
+                        Vector3 rotationAmount = new Vector3(startingRotation.x, firstR + currentR, startingRotation.z);
                         objectTracked.transform.eulerAngles = rotationAmount;
+                        firstR = firstR + currentR;
                         prevX = x;
                         prevY = y;
                         prevR = r;
