@@ -1,0 +1,118 @@
+ManifestFileVersion: 0
+CRC: 2443180865
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 68f51a29a7472d29b6ea20f026f3d16b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 81855614f94c9ad3096cf8b2d6dcd7f2
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 104
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: caff514de9b15ad48ab85dcff5508221, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c2fadf230d1919748a9aa21d40f74619, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 60172dc40bdad8f48aab53a62b47cd2c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e988983f96fe1dd48800bcdfc82f23e9, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9a6977c0f8b6187449a6bfea1b0ab890, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 332f118dac134a04ebc7e1741874d9b2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7c1d08c60e620a94f9d9e5f69c8e1bf1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e7030ff83b154bb44ab43c370e1b2b96, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 017c5e3933235514c9520e1dace2a4b2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ff5639ffd8007854d9a0736f006dc503, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5fba045e94b56ce43aaf6a0df49cfbda, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 120
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 157
+  Script: {instanceID: 0}
+- Class: 196
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+- Class: 210
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Scenes/juan2.unity
+Dependencies:
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_asset0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_controller0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_dae0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_inputactions0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_mat1
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_mat2
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_obj0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_resources

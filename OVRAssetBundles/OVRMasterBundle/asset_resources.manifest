@@ -1,0 +1,214 @@
+ManifestFileVersion: 0
+CRC: 2099787577
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0258eca41e176d33bb5a9c2ef0774f3a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: eb9c19ff7ac9fee2363408f0304f889e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2705215ac5b84b70bacc50632be6e391, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ad074644ff568a14187a3690cfbd7534, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 690929a59dc7a42da9030305190d391f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b2f528b98f844ed8b6b2d5fdf90b40e6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ab2114bdc8544297b417dfefe9f1e410, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ba5a5f182b3f9a14fa153e9bee21a2c4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 191492db6e452eb468b95433ec162164, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 54d21f6ece3b46479f0c328f8c6007e0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b2ebc9df6fa8629499eec403b7e7e567, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 84a92b25f83d49b9bc132d206b370281, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e2b12afd4d27418a9cfb2823fe2b9ff3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3863570e7e6387a40ae4f323d83291e5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 29341e3cec688724c89620641473c512, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c39bb24e2bd7a482ca08117fb44b8e44, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FaceInfo_Legacy
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FontAssetCreationSettings
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.KerningTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_Character
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontFeatureTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontWeightPair
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_GlyphAdjustmentRecord
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_GlyphPairAdjustmentRecord
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_GlyphValueRecord
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_Sprite
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_SpriteCharacter
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_SpriteGlyph
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_Style
+- AssemblyName: Unity.XR.Simulation
+  ClassName: UnityEngine.XR.Simulation.EnvironmentScanParams
+- AssemblyName: Unity.XR.Simulation
+  ClassName: UnityEngine.XR.Simulation.PlaneFindingParams
+- AssemblyName: Unity.XR.Simulation
+  ClassName: UnityEngine.XR.Simulation.SimulationRenderSettings
+- AssemblyName: Unity.XR.Simulation
+  ClassName: UnityEngine.XR.Simulation.TrackedImageDiscoveryParams
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Pose
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.FaceInfo
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.Glyph
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphMetrics
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphRect
+Assets:
+- Assets/Oculus/VR/Resources/Unlit Transparent Color.shader
+- Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Yellow to
+  Orange - Vertical.asset
+- Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+- Assets/Resources/UI/computer-white.png
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF.asset
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/LiberationSans
+  SDF - Metalic Green.mat
+- Assets/TextMesh Pro/Examples & Extras/Resources/Sprite Assets/Default Sprite Asset.asset
+- Assets/Resources/OculusRuntimeSettings.asset
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/LiberationSans
+  SDF - Soft Mask.mat
+- Assets/Oculus/Voice/Lib/Wit.ai/Resources/witai.png
+- Assets/TextMesh Pro/Resources/Fonts & Materials/Segoe UI SDF.asset
+- Assets/Oculus/Voice/Resources/voicesdk_texts_en-us.json
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset
+- Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+- Assets/XR/Resources/XRSimulationRuntimeSettings.asset
+- Assets/Resources/Audio/Piano.wav
+- Assets/Resources/OVRPlatformToolSettings.asset
+- Assets/Oculus/Interaction/Runtime/Resources/Shaders/DepthOverwrite.shader
+- Assets/Resources/UI/icons8-bullet-camera.png
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/LiberationSans
+  SDF - Overlay.mat
+- Assets/TextMesh Pro/Examples & Extras/Resources/Sprite Assets/DropCap Numbers.asset
+- Assets/Oculus/Voice/Lib/Wit.ai/Resources/wit-ai-title.png
+- Assets/Oculus/VR/Resources/OVRMRCameraFrameLit.shader
+- Assets/Resources/UI/audio-white.png
+- Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+- Assets/Oculus/VR/Resources/Cubemap Blit.shader
+- Assets/Resources/UI/icons8-computer-100.png
+- Assets/Oculus/VR/Resources/Underlay Impostor.shader
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF.asset
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Glow.mat
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Drop
+  Shadow.mat
+- Assets/Resources/ONSPSettings.asset
+- Assets/Oculus/Interaction/Runtime/Resources/Shaders/Imposter_AlphaBlended.shader
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Oswald Bold SDF.asset
+- Assets/XRI/Settings/Resources/InteractionLayerSettings.asset
+- Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+- Assets/Resources/UI/rotateSpace.png
+- Assets/Oculus/VR/Resources/Underlay Transparent Occluder.shader
+- Assets/Resources/UI/bullet-camera-white.png
+- Assets/Oculus/Interaction/Runtime/Resources/Shaders/Imposter_Opaque.shader
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF
+  - Surface.mat
+- Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+- Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Blue to
+  Purple - Vertical.asset
+- Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Light to
+  Dark Green - Vertical.asset
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Outline.mat
+- Assets/Oculus/Interaction/Runtime/Resources/Shaders/Imposter_AlphaCutout.shader
+- Assets/Oculus/Interaction/Runtime/Resources/Shaders/Imposter_AlphaToMask.shader
+- Assets/XR/UserSimulationSettings/Resources/XRSimulationPreferences.asset
+- Assets/Oculus/VR/Resources/OVRMRUnlitTransparent.shader
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway
+  Sign SDF.asset
+- Assets/Oculus/Interaction/Runtime/Resources/Shaders/UIOverlay.shader
+- Assets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Sunny
+  Days.mat
+- Assets/Oculus/VR/Resources/OVRMRUnlit.shader
+- Assets/Oculus/Voice/Resources/voicesdk_heroart.png
+- Assets/Resources/Audio/IR colivri.wav
+- Assets/Oculus/Voice/Lib/Wit.ai/Resources/witai_texts_en-us.json
+- Assets/Resources/UI/icons8-audio-100.png
+- Assets/TextMesh Pro/Resources/TMP Settings.asset
+- Assets/Resources/UI/moveSpace.png
+- Assets/Oculus/VR/Resources/OVRMRCameraFrame.shader
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF
+  - Drop Shadow.mat
+- Assets/Resources/UI/icons8-colibri-64.png
+- Assets/Oculus/Interaction/Runtime/Resources/Shaders/UnderlayTransparentOccluderImposter.shader
+- Assets/Resources/UI/bbdcad61-95b8-4b0f-aff6-c8ebb147022d.jpg
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF -
+  Outline.mat
+- Assets/TextMesh Pro/Examples & Extras/Resources/Color Gradient Presets/Dark to
+  Light Green - Vertical.asset
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF -
+  Drop Shadow.mat
+- Assets/Oculus/Interaction/Runtime/Resources/Shaders/Imposter_Underlay.shader
+- Assets/Oculus/Interaction/Runtime/Resources/Shaders/Imposter_Underlay_AA.shader
+- Assets/Resources/UI/icons8-cameras-96.png
+- Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat
+- Assets/Resources/UI/95ed8ed8-2fbe-47ef-927f-82a48959d1c0.jpg
+- Assets/Resources/UI/cameras-white.png
+- Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+- Assets/Oculus/Voice/Lib/Wit.ai/Resources/continue-with-fb.png
+- Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+- Assets/Resources/Audio/quick-mechanical-keyboard-14391.mp3
+- Assets/Resources/OVRBuildConfig.asset
+- Assets/TextMesh Pro/Resources/Fonts & Materials/selawk SDF.asset
+- Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
+- Assets/Oculus/VR/Resources/Texture2D Blit.shader
+Dependencies:
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_ttf0

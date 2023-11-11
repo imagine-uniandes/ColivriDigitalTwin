@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 1758246839
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 54e4178191b7cb2e824d3bd38e822564
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0f9fba26cbb38215f317d1fd6b1954a0
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Models/Lab inicial v10.obj
+- Assets/Materials/Oficina S1/OficinaVivian/MI SMART TV.obj
+- Assets/Materials/Oficina S1/20888_Plug_Socket_v2.obj
+- Assets/Materials/Oficina S1/OficinaVivian/16737_dry_erase_board_V1.obj
+- Assets/Prefabs/oculus_quest_2.obj
+- Assets/Low-Poly 3D Lockers/Low-Poly 3D Lockers/Mesh/M.C.C.obj
+Dependencies:
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_shader0

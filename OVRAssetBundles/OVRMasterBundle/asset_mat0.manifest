@@ -1,0 +1,56 @@
+ManifestFileVersion: 0
+CRC: 3748396577
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fdf016a05a940f2620eda3d0e873f411
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b30fce1a9ad74efb72be6c308c56e365
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Materials/questMaterial.mat
+- Assets/devotid/Folding Table and Chair/Materials/Table and Chair.mat
+- Assets/Materials/BlueChair.mat
+- Assets/Surface/Cabinets_01.mat
+- Assets/Materials/DarkGrey.mat
+- Assets/Materials/DarkPurple.mat
+- Assets/Materials/ShinyMetal02.mat
+- Assets/YughuesFreeMetalMaterials/Materials/M_YFMM_24.mat
+- Assets/Surface/Plastic_01.mat
+- Assets/Materials/Wood.mat
+- Assets/Materials/DarkBlue.mat
+- Assets/YughuesFreeMetalMaterials/Materials/M_YFMM_27.mat
+- Assets/Surface/Brushed Metal_Brass.mat
+- Assets/YughuesFreeMetalMaterials/Materials/M_YFMM_13.mat
+- Assets/YughuesFreeMetalMaterials/Materials/M_YFMM_11.mat
+- Assets/YughuesFreeMetalMaterials/Materials/M_YFMM_30.mat
+- Assets/Materials/DarkPlastic.mat
+- Assets/Materials/RailingBars.mat
+- Assets/Materials/DarkGlass.mat
+- Assets/Materials/WhitePlastic.mat
+- Assets/Materials/White.mat
+- Assets/Models/dell materials/__Color_008_6.mat
+- Assets/Materials/Procedural_Cable_Black.mat
+- Assets/YughuesFreeMetalMaterials/Materials/M_YFMM_21.mat
+- Assets/Surface/Antique.mat
+- Assets/Materials/dell.mat
+- Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+- Assets/Materials/HPKeyboard.mat
+- Assets/Surface/Glass_Dark.mat
+- Assets/Models/dell materials/Metal_Corrugated_Shiny_0.mat
+Dependencies:
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_jpeg0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_mat1
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_tga0

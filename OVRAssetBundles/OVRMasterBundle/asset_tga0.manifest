@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 1742053001
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9a5c777dbaa8acbdf5ef31cc37e839fc
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_18_Diffuse.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_47_Diffuse.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_35_Normal.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_11_Diffuse.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_18_Normal.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_18_Specular.tga
+- Assets/Textures/T30Normal.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_47_Normal.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_35_Diffuse.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_11_Specular.tga
+- Assets/Textures/T30Specular.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_24_Diffuse.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_27_Specular.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_21_Specular.tga
+- Assets/Textures/T30Diffuse.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_13_Diffuse.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_21_Diffuse.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_47_Specular.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_11_Normal.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_35_Specular.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_24_Specular.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_27_Normal.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_24_Normal.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_27_Diffuse.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_13_Normal.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_13_Specular.tga
+- Assets/YughuesFreeMetalMaterials/Materials/Textures/T_21_Normal.tga
+Dependencies: []

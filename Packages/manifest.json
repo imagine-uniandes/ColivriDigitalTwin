@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.9.0.tgz",
     "com.microsoft.mrtk.graphicstools.unity": "file:MixedReality/com.microsoft.mrtk.graphicstools.unity-0.6.2.tgz",
     "com.microsoft.mrtk.tts.windows": "file:MixedReality/com.microsoft.mrtk.tts.windows-1.0.1.tgz",
     "com.unity.collab-proxy": "2.2.0",
@@ -16,7 +15,6 @@
     "com.unity.xr.interaction.toolkit": "2.4.3",
     "com.unity.xr.management": "4.4.0",
     "com.unity.xr.oculus": "4.0.0",
-    "com.unity.xr.openxr": "1.8.2",
     "org.mixedrealitytoolkit.accessibility": "file:MixedReality/org.mixedrealitytoolkit.accessibility-1.0.0-pre.18.tgz",
     "org.mixedrealitytoolkit.audio": "file:MixedReality/org.mixedrealitytoolkit.audio-3.0.0.tgz",
     "org.mixedrealitytoolkit.core": "file:MixedReality/org.mixedrealitytoolkit.core-3.0.1.tgz",

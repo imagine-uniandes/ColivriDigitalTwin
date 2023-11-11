@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3611985417
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a3c55c628cc13e94ba0caa5af55e07c3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Textures/Metal_Corrugated_Shiny.jpg
+- Assets/Textures/material_33.jpg
+- Assets/Textures/Metal_Corrugated_Shiny_0.jpg
+- Assets/Textures/TecladoApple.jpg
+- Assets/Textures/apple_leopard_desktop_test.jpg
+Dependencies: []

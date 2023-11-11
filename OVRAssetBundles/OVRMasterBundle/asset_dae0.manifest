@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 3262225851
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4154ded888447255e374c0b660e1761b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5e31308af89c60ad7d66849544d31ff6
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.RenderPipelines.Universal.Runtime
+  ClassName: UnityEngine.Rendering.Universal.TemporalAA/Settings
+Assets:
+- Assets/Models/temp_export.dae
+Dependencies:
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_jpg0

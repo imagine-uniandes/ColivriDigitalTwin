@@ -1,0 +1,116 @@
+ManifestFileVersion: 0
+CRC: 1511778736
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: asset_resources
+      Dependencies:
+        Dependency_0: asset_shader0
+        Dependency_1: asset_ttf0
+    Info_1:
+      Name: scene_juan2
+      Dependencies:
+        Dependency_0: asset_resources
+        Dependency_1: asset_prefab0
+        Dependency_2: asset_fbx0
+        Dependency_3: asset_mat0
+        Dependency_4: asset_mat1
+        Dependency_5: asset_mat2
+        Dependency_6: asset_fbx0
+        Dependency_7: asset_asset0
+        Dependency_8: asset_controller0
+        Dependency_9: asset_obj0
+        Dependency_10: asset_dae0
+        Dependency_11: asset_inputactions0
+    Info_2:
+      Name: asset_tga0
+      Dependencies: {}
+    Info_3:
+      Name: asset_prefab0
+      Dependencies:
+        Dependency_0: asset_fbx0
+        Dependency_1: asset_mat0
+        Dependency_2: asset_mat1
+        Dependency_3: asset_mat2
+        Dependency_4: asset_fbx0
+    Info_4:
+      Name: asset_shader0
+      Dependencies:
+        Dependency_0: asset_png0
+    Info_5:
+      Name: asset_fbx0
+      Dependencies:
+        Dependency_0: asset_shader0
+        Dependency_1: asset_mat0
+        Dependency_2: asset_mat1
+        Dependency_3: asset_png0
+        Dependency_4: asset_shadergraph0
+    Info_6:
+      Name: asset_mat0
+      Dependencies:
+        Dependency_0: asset_tga0
+        Dependency_1: asset_shader0
+        Dependency_2: asset_mat1
+        Dependency_3: asset_jpeg0
+        Dependency_4: asset_png0
+        Dependency_5: asset_jpg0
+    Info_7:
+      Name: asset_mat1
+      Dependencies:
+        Dependency_0: asset_tga0
+        Dependency_1: asset_shader0
+        Dependency_2: asset_mat0
+        Dependency_3: asset_jpeg0
+        Dependency_4: asset_png0
+        Dependency_5: asset_jpg0
+    Info_8:
+      Name: asset_mat2
+      Dependencies:
+        Dependency_0: asset_shader0
+        Dependency_1: asset_png0
+    Info_9:
+      Name: asset_jpeg0
+      Dependencies: {}
+    Info_10:
+      Name: asset_fbx0
+      Dependencies:
+        Dependency_0: asset_shader0
+        Dependency_1: asset_mat0
+    Info_11:
+      Name: asset_anim0
+      Dependencies: {}
+    Info_12:
+      Name: asset_psd0
+      Dependencies: {}
+    Info_13:
+      Name: asset_png0
+      Dependencies: {}
+    Info_14:
+      Name: asset_asset0
+      Dependencies:
+        Dependency_0: asset_shader0
+        Dependency_1: asset_ttf0
+    Info_15:
+      Name: asset_controller0
+      Dependencies:
+        Dependency_0: asset_anim0
+    Info_16:
+      Name: asset_obj0
+      Dependencies:
+        Dependency_0: asset_shader0
+    Info_17:
+      Name: asset_jpg0
+      Dependencies: {}
+    Info_18:
+      Name: asset_dae0
+      Dependencies:
+        Dependency_0: asset_jpg0
+    Info_19:
+      Name: asset_ttf0
+      Dependencies: {}
+    Info_20:
+      Name: asset_shadergraph0
+      Dependencies: {}
+    Info_21:
+      Name: asset_inputactions0
+      Dependencies: {}
