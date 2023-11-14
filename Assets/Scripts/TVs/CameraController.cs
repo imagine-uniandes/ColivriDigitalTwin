@@ -26,11 +26,12 @@ public class CameraController : MonoBehaviour
     private bool isFading = false; // Flag to track if fading is in progress
     private Camera[] cameras; // Array of cameras to adjust fading
     private PlayerInput playerInput;
+    private ButtonNavigator buttonNavigator;
     private InputAction rotationAction;
     private InputAction zoomAction;
     private bool returnPressedOnce = false;
 
-    private void Awake()
+    private void OnEnable()
     {
         playerInput = GetComponentInParent<PlayerInput>();
         if (playerInput == null)
@@ -39,6 +40,11 @@ public class CameraController : MonoBehaviour
         }
         rotationAction = playerInput.actions["Rotation"];
         zoomAction = playerInput.actions["Zoom"];
+
+        buttonNavigator = GetComponentInParent<ButtonNavigator>();
+        if (buttonNavigator == null)
+            Debug.LogError("ButtonNavigator script not found in the parent GameObject.");
+        buttonNavigator.SetButtons(buttonsContainer.GetComponentsInChildren<Button>());
     }
 
     private void Start()
@@ -57,6 +63,8 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        buttonNavigator.NavigateButtons(rotationAction.ReadValue<Vector3>().z);
+
         if (selectedGX == null)
         {
             // No GX is selected, return
