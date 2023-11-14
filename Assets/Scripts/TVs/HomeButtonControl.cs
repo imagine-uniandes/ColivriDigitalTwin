@@ -14,7 +14,7 @@ public class HomeButtonControl : MonoBehaviour
     public GameObject buttonsGroup;
     private ButtonNavigator buttonNavigator;
 
-    private void Awake()
+    private void OnEnable()
     {
         playerInput = GetComponentInParent<PlayerInput>();
         if (playerInput == null)
