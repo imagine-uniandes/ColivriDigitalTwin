@@ -2606,7 +2606,6 @@ GameObject:
   m_Component:
   - component: {fileID: 173348838}
   - component: {fileID: 173348841}
-  - component: {fileID: 173348840}
   - component: {fileID: 173348839}
   m_Layer: 0
   m_Name: Camera
@@ -2675,14 +2674,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &173348840
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173348837}
-  m_Enabled: 1
 --- !u!20 &173348841
 Camera:
   m_ObjectHideFlags: 0
@@ -4442,6 +4433,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1861550158
+      Data2: 1131646579
+      Data3: 906941367
+      Data4: 751883970
+    Path: event:/KeyboardConvolution
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &287342477
 GameObject:
   m_ObjectHideFlags: 0
@@ -4654,6 +4664,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 776805918
+      Data2: 1224822796
+      Data3: -1262232178
+      Data4: 385647264
+    Path: event:/PianoClean
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &338879185
 GameObject:
   m_ObjectHideFlags: 0
@@ -12663,6 +12692,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 832527691
+      Data2: 1274129127
+      Data3: -301525631
+      Data4: -244432510
+    Path: event:/KeyboardClean
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1095782962
 GameObject:
   m_ObjectHideFlags: 0
@@ -14319,7 +14367,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1249444550}
   - component: {fileID: 1249444553}
-  - component: {fileID: 1249444552}
   - component: {fileID: 1249444551}
   m_Layer: 0
   m_Name: Camera
@@ -14388,14 +14435,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1249444552
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249444549}
-  m_Enabled: 1
 --- !u!20 &1249444553
 Camera:
   m_ObjectHideFlags: 0
@@ -14981,7 +15020,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1355162824}
   - component: {fileID: 1355162827}
-  - component: {fileID: 1355162826}
   - component: {fileID: 1355162825}
   m_Layer: 0
   m_Name: Camera
@@ -15050,14 +15088,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1355162826
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355162823}
-  m_Enabled: 1
 --- !u!20 &1355162827
 Camera:
   m_ObjectHideFlags: 0
@@ -16735,6 +16765,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1730030592
+      Data2: 1290192617
+      Data3: 1954166965
+      Data4: 1702753084
+    Path: event:/PianoConvolution
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1556188357
 GameObject:
   m_ObjectHideFlags: 0
@@ -22539,6 +22588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!114 &2041408282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22744,7 +22794,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2057179648}
   - component: {fileID: 2057179651}
-  - component: {fileID: 2057179650}
   - component: {fileID: 2057179649}
   m_Layer: 0
   m_Name: Camera
@@ -22812,14 +22861,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &2057179650
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057179647}
-  m_Enabled: 1
 --- !u!20 &2057179651
 Camera:
   m_ObjectHideFlags: 0
