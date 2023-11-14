@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Oculus/VR/Scenes/ControllerDrivenHandPoses.unity
     guid: 7ea9f7c90c2fa404d86276a633b59903
   - enabled: 1
-    path: Assets/Scenes/juan2.unity
+    path: Assets/Scenes/MetaQuest2.unity
     guid: 99bc2a70ffbb55a4d988ab4f47ca54ef
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 44bda92e839bebf4893aba963b2b03cc, type: 2}
