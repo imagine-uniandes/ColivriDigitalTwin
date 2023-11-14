@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     public Button button1;
     public Button button2;
     public float rotationSpeed = 5f; // Speed of rotation in degrees per second
-    public float movementSpeed = 1f; // Speed of movement
+    public float movementSpeed = 3.5f; // Speed of movement
     public Button[] arrowButtons; // Array of arrow buttons
     private Transform selectedGX;
     private int selectedIndex = -1; // Currently selected GX index
@@ -26,11 +26,12 @@ public class CameraController : MonoBehaviour
     private bool isFading = false; // Flag to track if fading is in progress
     private Camera[] cameras; // Array of cameras to adjust fading
     private PlayerInput playerInput;
+    private ButtonNavigator buttonNavigator;
     private InputAction rotationAction;
     private InputAction zoomAction;
     private bool returnPressedOnce = false;
 
-    private void Awake()
+    private void OnEnable()
     {
         playerInput = GetComponentInParent<PlayerInput>();
         if (playerInput == null)
@@ -39,6 +40,11 @@ public class CameraController : MonoBehaviour
         }
         rotationAction = playerInput.actions["Rotation"];
         zoomAction = playerInput.actions["Zoom"];
+
+        buttonNavigator = GetComponentInParent<ButtonNavigator>();
+        if (buttonNavigator == null)
+            Debug.LogError("ButtonNavigator script not found in the parent GameObject.");
+        buttonNavigator.SetButtons(buttonsContainer.GetComponentsInChildren<Button>());
     }
 
     private void Start()
@@ -57,6 +63,8 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        buttonNavigator.NavigateButtons(rotationAction.ReadValue<Vector3>().y);
+
         if (selectedGX == null)
         {
             // No GX is selected, return
@@ -87,10 +95,10 @@ public class CameraController : MonoBehaviour
             float zoom = zoomAction.ReadValue<float>() * movementSpeed * Time.deltaTime;
 
             // Rotate the camera based on joystick input
-            selectedGX.Rotate(Rx, Ry, Rz);
+            selectedGX.Rotate(Rx, -Ry, -Rz);
 
             // Zoom in/out with the Z axis
-            Vector3 move = new Vector3(0, 0, zoom);
+            Vector3 move = new Vector3(0, -zoom, 0);
             mainCameraGroup.transform.Translate(move);
 
             // Go back to the selection menu
