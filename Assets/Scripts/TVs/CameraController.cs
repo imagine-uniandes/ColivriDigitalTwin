@@ -45,6 +45,9 @@ public class CameraController : MonoBehaviour
         if (buttonNavigator == null)
             Debug.LogError("ButtonNavigator script not found in the parent GameObject.");
         buttonNavigator.SetButtons(buttonsContainer.GetComponentsInChildren<Button>());
+
+        RestoreInitialPositionAndRotation();
+        StartFadeIn(selectedGX.gameObject);
     }
 
     private void Start()
@@ -102,20 +105,17 @@ public class CameraController : MonoBehaviour
             mainCameraGroup.transform.Translate(move);
 
             // Go back to the selection menu
-            if (canMove)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (!returnPressedOnce)
                 {
-                    if (!returnPressedOnce)
-                    {
-                        returnPressedOnce = true;
-                    }
-                    else
-                    {
-                        RestoreInitialPositionAndRotation();
-                        StartFadeIn(selectedGX.gameObject);
-                        returnPressedOnce = false;
-                    }
+                    returnPressedOnce = true;
+                }
+                else
+                {
+                    RestoreInitialPositionAndRotation();
+                    StartFadeIn(selectedGX.gameObject);
+                    returnPressedOnce = false;
                 }
             }
         }
