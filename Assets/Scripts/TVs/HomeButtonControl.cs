@@ -12,12 +12,7 @@ public class HomeButtonControl : MonoBehaviour
     public Button resetButton;
     public Button exitButton;
     public GameObject buttonsGroup;
-
-    private Button[] buttons;
-    private int selectedIndex = 0;
-    public float rotationThreshold = 0.25f;
-    public float rotationCooldown = 0.25f;
-    private float lastRotationTime;
+    private ButtonNavigator buttonNavigator;
 
     private void Awake()
     {
@@ -27,45 +22,22 @@ public class HomeButtonControl : MonoBehaviour
             Debug.LogError("PlayerInput component not found. Please attach the PlayerInput component to this GameObject.");
         }
         rotationAction = playerInput.actions["Rotation"];
+
+        buttonNavigator = GetComponentInParent<ButtonNavigator>();
+        if (buttonNavigator == null)
+            Debug.LogError("ButtonNavigator script not found in the parent GameObject.");
+        buttonNavigator.SetButtons(buttonsGroup.GetComponentsInChildren<Button>());
     }
 
     private void Start()
     {
-        buttons = buttonsGroup.GetComponentsInChildren<Button>();
         resetButton.onClick.AddListener(ResetGame);
         exitButton.onClick.AddListener(ExitGame);
     }
 
     private void Update()
     {
-        float rotationZ = rotationAction.ReadValue<Vector3>().z;
-
-        if (Mathf.Abs(rotationZ) > rotationThreshold && Time.time - lastRotationTime >= rotationCooldown)
-        {
-            // Move to the next or previous button based on the rotation direction
-            if (rotationZ > rotationThreshold)
-            {
-                MoveToNextButton();
-            }
-            else if (rotationZ < -rotationThreshold)
-            {
-                MoveToPreviousButton();
-            }
-
-            lastRotationTime = Time.time;
-        }
-    }
-
-    private void MoveToNextButton()
-    {
-        selectedIndex = (selectedIndex + 1) % buttons.Length;
-        buttons[selectedIndex].Select();
-    }
-
-    private void MoveToPreviousButton()
-    {
-        selectedIndex = (selectedIndex - 1 + buttons.Length) % buttons.Length;
-        buttons[selectedIndex].Select();
+        buttonNavigator.NavigateButtons(rotationAction.ReadValue<Vector3>().z);
     }
 
     private void ResetGame()

@@ -6,7 +6,11 @@ public class PanelSwitcher : MonoBehaviour
 {
     [SerializeField] private Button buttonToEnablePanel;
     [SerializeField] private GameObject panelToEnable;
+    [SerializeField] private GameObject homePanel;
     [SerializeField] private GameObject[] panelsToHide;
+
+    // Variable to control whether going back to the home panel is allowed
+    private bool canGoBackToHome = true;
 
     private void Start()
     {
@@ -41,5 +45,38 @@ public class PanelSwitcher : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(selectables[0].gameObject);
         }
+    }
+
+    private void Update()
+    {
+        // Check if the M key is pressed to go back to the home panel
+        if (Input.GetKeyDown(KeyCode.M) && canGoBackToHome)
+        {
+            GoBackToHomePanel();
+        }
+    }
+
+    private void GoBackToHomePanel()
+    {
+        // Hide the current active panel (if any)
+        if (panelToEnable != null)
+        {
+            panelToEnable.SetActive(false);
+        }
+
+        // Show the home panel
+        if (homePanel != null)
+        {
+            homePanel.SetActive(true);
+
+            // Focus on a selectable element in the home panel
+            SelectDefaultButton(homePanel);
+        }
+    }
+
+    // Method to set whether going back to the home panel is allowed
+    public void SetCanGoBackToHome(bool value)
+    {
+        canGoBackToHome = value;
     }
 }

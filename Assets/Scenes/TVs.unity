@@ -12192,6 +12192,7 @@ GameObject:
   - component: {fileID: 1058752098}
   - component: {fileID: 1058752097}
   - component: {fileID: 1058752096}
+  - component: {fileID: 1058752100}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -12276,6 +12277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonToEnablePanel: {fileID: 2101377894}
   panelToEnable: {fileID: 2099635517}
+  homePanel: {fileID: 2134994241}
   panelsToHide:
   - {fileID: 2134994241}
   - {fileID: 167426598}
@@ -12295,6 +12297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonToEnablePanel: {fileID: 2083829665}
   panelToEnable: {fileID: 167426598}
+  homePanel: {fileID: 2134994241}
   panelsToHide:
   - {fileID: 2134994241}
   - {fileID: 2099635517}
@@ -12314,6 +12317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonToEnablePanel: {fileID: 1072587109}
   panelToEnable: {fileID: 41900075}
+  homePanel: {fileID: 2134994241}
   panelsToHide:
   - {fileID: 2134994241}
   - {fileID: 2099635517}
@@ -12333,11 +12337,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonToEnablePanel: {fileID: 598359905}
   panelToEnable: {fileID: 1647445177}
+  homePanel: {fileID: 2134994241}
   panelsToHide:
   - {fileID: 2134994241}
   - {fileID: 2099635517}
   - {fileID: 167426598}
   - {fileID: 41900075}
+--- !u!114 &1058752100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058752092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f506e1405ea7f4b97dd480d17f63b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationThreshold: 0.25
+  rotationCooldown: 0.25
 --- !u!1 &1072587107
 GameObject:
   m_ObjectHideFlags: 0
@@ -23922,8 +23941,6 @@ MonoBehaviour:
   resetButton: {fileID: 250849819}
   exitButton: {fileID: 352273477}
   buttonsGroup: {fileID: 2016105729}
-  rotationThreshold: 0.25
-  rotationCooldown: 0.25
 --- !u!114 &2134994246
 MonoBehaviour:
   m_ObjectHideFlags: 0
