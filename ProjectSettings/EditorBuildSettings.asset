@@ -12,4 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TVs.unity
     guid: afb10cfd3bac6e74d9a132a3db9db158
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 44bda92e839bebf4893aba963b2b03cc, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: b1a0ebcc273b4b141a7e51b03c844cbd, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c1aff7189518ffd4b82dae264d3268fa, type: 2}
