@@ -53,7 +53,7 @@ public class AudioController : MonoBehaviour
 
     private void Update()
     {
-        buttonNavigator.NavigateButtons(rotationAction.ReadValue<Vector3>().z);
+        buttonNavigator.NavigateButtons(rotationAction.ReadValue<Vector3>().y);
     }
 
     public void ActivateAudio(int audioIndex)

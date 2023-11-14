@@ -16,7 +16,7 @@ public class ButtonNavigator : MonoBehaviour
         buttons = newButtons;
     }
 
-    public void NavigateButtons(float rotationZ)
+    public void NavigateButtons(float rotation)
     {
         if (buttons == null || buttons.Length == 0)
         {
@@ -24,14 +24,14 @@ public class ButtonNavigator : MonoBehaviour
             return;
         }
 
-        if (Mathf.Abs(rotationZ) > rotationThreshold && Time.time - lastRotationTime >= rotationCooldown)
+        if (Mathf.Abs(rotation) > rotationThreshold && Time.time - lastRotationTime >= rotationCooldown)
         {
             // Move to the next or previous button based on the rotation direction
-            if (rotationZ > rotationThreshold)
+            if (rotation > rotationThreshold)
             {
                 MoveToNextButton();
             }
-            else if (rotationZ < -rotationThreshold)
+            else if (rotation < -rotationThreshold)
             {
                 MoveToPreviousButton();
             }

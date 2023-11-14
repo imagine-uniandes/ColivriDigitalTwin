@@ -63,7 +63,7 @@ public class StaticInfoReader : MonoBehaviour
 
         if (Time.time - lastInputTime > inputCooldown)
         {
-            if (horizontalInput > 0.8f)
+            if (horizontalInput > 0.5f)
             {
                 if (!isStaticPanelEnabled)
                 {
@@ -76,7 +76,7 @@ public class StaticInfoReader : MonoBehaviour
                 DisplayCurrentPC();
                 lastInputTime = Time.time;
             }
-            else if (horizontalInput < -0.8f)
+            else if (horizontalInput < -0.5f)
             {
                 if (isStaticPanelEnabled)
                 {

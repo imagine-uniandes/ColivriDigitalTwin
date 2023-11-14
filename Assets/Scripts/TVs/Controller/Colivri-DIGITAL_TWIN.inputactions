@@ -824,7 +824,7 @@
                 {
                     "name": "Up",
                     "id": "ddb73e04-5e9d-4bf5-99a6-e862d4cfd7dd",
-                    "path": "<HID::Shaul Eizikovich vJoy - Virtual Joystick>/ry",
+                    "path": "<HID::Shaul Eizikovich vJoy - Virtual Joystick>/rz",
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
@@ -846,7 +846,7 @@
                 {
                     "name": "Forward",
                     "id": "4d48d01b-b3fa-4fa3-b55e-5c48d99a7b6d",
-                    "path": "<HID::Shaul Eizikovich vJoy - Virtual Joystick>/rz",
+                    "path": "<HID::Shaul Eizikovich vJoy - Virtual Joystick>/ry",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
