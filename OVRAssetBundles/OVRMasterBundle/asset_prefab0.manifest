@@ -1,0 +1,53 @@
+ManifestFileVersion: 0
+CRC: 529996094
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b53621f5e0c142a8a10e3332f207f941
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c3bd46294434b72fbd7a5560f86c8f01
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 205
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/ElectricTVsPipe.prefab
+- Assets/Prefabs/TVSet.prefab
+- Assets/Prefabs/TV.prefab
+- Assets/Samples/XR Interaction Toolkit/2.4.3/Starter Assets/Prefabs/Controllers/XR
+  Controller Left.prefab
+- Assets/Prefabs/Desk.prefab
+- Assets/Prefabs/Wardrobe_Low_L_01.prefab
+- Assets/Prefabs/Mouse.prefab
+- Assets/Prefabs/KeyBoard.prefab
+- Assets/Prefabs/Computer.prefab
+- Assets/Prefabs/GrayChair.prefab
+- Assets/Samples/XR Interaction Toolkit/2.4.3/Starter Assets/Prefabs/Controllers/XR
+  Controller Right.prefab
+Dependencies:
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_mat1
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_mat2

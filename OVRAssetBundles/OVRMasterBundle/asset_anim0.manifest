@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3919929261
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3ddadb1f0150dfbd4edfb60f42ce94b1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5941c3541d8b403f80e37b0d697371e8
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Materials/Propeller2.anim
+- Assets/Materials/Propeller3.anim
+- Assets/Materials/Propeller1.anim
+- Assets/Materials/Propeller4.anim
+Dependencies: []

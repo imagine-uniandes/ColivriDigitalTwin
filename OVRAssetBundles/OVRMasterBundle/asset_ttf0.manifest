@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 2689860253
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c83f7ea369fb45099ac353211ad01030
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9372662e05ede815898c391bbc5766da
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Packages/org.mixedrealitytoolkit.standardassets/Fonts/selawksb.ttf
+- Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+- Packages/org.mixedrealitytoolkit.standardassets/Fonts/selawk.ttf
+Dependencies: []

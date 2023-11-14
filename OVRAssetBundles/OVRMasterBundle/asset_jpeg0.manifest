@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 4155404215
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b79550acc21924b997a6d96f4ed4d11b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Textures/material_33.jpeg
+- Assets/Materials/CautionTape.jpeg
+Dependencies: []

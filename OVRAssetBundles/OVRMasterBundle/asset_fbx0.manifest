@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 613041177
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eb9ed363a0199cf57d321d4698b59420
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7c93407dbbbb5ab91009134ab343634e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/devotid/Folding Table and Chair/Model/Folding Table and Chair FBX.FBX
+- Assets/Models/ChairMidLevel.FBX
+- Assets/Models/ChairLowLevel.FBX
+- Assets/Models/ChairHighLevel.FBX
+Dependencies:
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_shader0
