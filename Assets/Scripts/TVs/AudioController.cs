@@ -1,14 +1,35 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.InputSystem.Users;
 
 public class AudioController : MonoBehaviour
 {
-    public GameObject buttonPanel; // Reference to the ButtonPanel group
-    public GameObject audiosGroup; // Reference to the Audios group
+    private PlayerInput playerInput;
+    private InputAction rotationAction;
+    private ButtonNavigator buttonNavigator;
+    public GameObject buttonPanel;
+    public GameObject audiosGroup;
 
     private Button[] buttons;
-    private List<GameObject> audioObjects = new List<GameObject>(); // Use a list to store audio objects
+    private List<GameObject> audioObjects = new List<GameObject>();
+
+    private void OnEnable()
+    {
+        playerInput = GetComponentInParent<PlayerInput>();
+        if (playerInput == null)
+        {
+            Debug.LogError("PlayerInput component not found. Please attach the PlayerInput component to this GameObject.");
+        }
+        rotationAction = playerInput.actions["Rotation"];
+
+        buttonNavigator = GetComponentInParent<ButtonNavigator>();
+        if (buttonNavigator == null)
+            Debug.LogError("ButtonNavigator script not found in the parent GameObject.");
+        buttonNavigator.SetButtons(buttonPanel.GetComponentsInChildren<Button>());
+    }
 
     private void Start()
     {
@@ -28,6 +49,11 @@ public class AudioController : MonoBehaviour
             int audioIndex = i; // Capture the index in a local variable for the listener
             buttons[i].onClick.AddListener(() => ActivateAudio(audioIndex));
         }
+    }
+
+    private void Update()
+    {
+        buttonNavigator.NavigateButtons(rotationAction.ReadValue<Vector3>().z);
     }
 
     public void ActivateAudio(int audioIndex)
