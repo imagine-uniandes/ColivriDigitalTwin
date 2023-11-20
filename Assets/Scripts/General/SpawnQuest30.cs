@@ -21,7 +21,7 @@ public class SpawnQuest30 : MonoBehaviour
     private Vector3 targetPosition;
     private Quaternion targetRotation;
 
-    private string serverURL = "http://172.24.100.110:8080/data/meta20";
+    private string serverURL = "http://172.24.100.110:8080/data/meta30";
 
     void Start()
     {
