@@ -15,6 +15,8 @@
     "com.unity.xr.interaction.toolkit": "2.4.3",
     "com.unity.xr.management": "4.4.0",
     "com.unity.xr.oculus": "4.0.0",
+    "com.unity.xr.openxr": "1.8.2",
+    "com.valvesoftware.unity.openvr": "file:../Assets/SteamVR/OpenVRUnityXRPackage/Editor/com.valvesoftware.unity.openvr-1.1.4.tgz",
     "org.mixedrealitytoolkit.accessibility": "file:MixedReality/org.mixedrealitytoolkit.accessibility-1.0.0-pre.18.tgz",
     "org.mixedrealitytoolkit.audio": "file:MixedReality/org.mixedrealitytoolkit.audio-3.0.0.tgz",
     "org.mixedrealitytoolkit.core": "file:MixedReality/org.mixedrealitytoolkit.core-3.0.1.tgz",
