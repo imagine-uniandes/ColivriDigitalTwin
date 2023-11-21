@@ -2,19 +2,26 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: def
-  m_Shader: {fileID: 4800000, guid: 908b379d4818cd64184b95a21123d909, type: 3}
-  m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_BLINNPHONG
+  m_Shader: {fileID: 4800000, guid: a3e1dddc96616ef4991f6d7101d161ca, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - S_RECEIVE_SHADOWS
+  - S_SPECULAR_BLINNPHONG
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -62,6 +69,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cull: 2
@@ -69,6 +77,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FogMultiplier: 1
+    - _Frequency_: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -80,6 +89,9 @@ Material:
     - _OcclusionStrengthIndirectDiffuse: 1
     - _OcclusionStrengthIndirectSpecular: 1
     - _Parallax: 0.02
+    - _Phase_: 0
+    - _Power_: 1
+    - _Shift_: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpecularMode: 1
@@ -97,6 +109,7 @@ Material:
     - g_flReflectanceScale: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color_: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - g_vWorldAlignedNormalTangentU: {r: -1, g: 0, b: 0, a: 0}
@@ -104,3 +117,4 @@ Material:
     - g_vWorldAlignedTextureNormal: {r: 0, g: 1, b: 0, a: 0}
     - g_vWorldAlignedTexturePosition: {r: 0, g: 0, b: 0, a: 0}
     - g_vWorldAlignedTextureSize: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []

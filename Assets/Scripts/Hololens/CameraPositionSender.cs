@@ -16,14 +16,14 @@ public class CameraData
 
 public class CameraPositionSender : MonoBehaviour
 {
-    private string serverURL = "http://172.24.100.110:8080/data/holop";
-    public float updateInterval = 2f; // Intervalo de actualización en segundos
+    private string serverURL = "http://172.24.100.110:8080/data/vive";
+    public float updateInterval = 2f; // Intervalo de actualizaciï¿½n en segundos
 
     private bool isApplicationPaused = false;
 
     private void Start()
     {
-        // Inicia la actualización periódica
+        // Inicia la actualizaciï¿½n periï¿½dica
         InvokeRepeating("SendCameraData", 0f, updateInterval);
     }
 
@@ -33,8 +33,8 @@ public class CameraPositionSender : MonoBehaviour
 
         if (isApplicationPaused)
         {
-            // La aplicación está en pausa o en segundo plano
-            // Envía un JSON con posición y rotación nula al servidor
+            // La aplicaciï¿½n estï¿½ en pausa o en segundo plano
+            // Envï¿½a un JSON con posiciï¿½n y rotaciï¿½n nula al servidor
             CameraData nullData = new CameraData
             {
                 x = 1000f,
@@ -52,8 +52,8 @@ public class CameraPositionSender : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        // La aplicación se está cerrando
-        // Envía un JSON con posición y rotación nula al servidor antes de cerrar la aplicación
+        // La aplicaciï¿½n se estï¿½ cerrando
+        // Envï¿½a un JSON con posiciï¿½n y rotaciï¿½n nula al servidor antes de cerrar la aplicaciï¿½n
         CameraData nullData = new CameraData
         {
             x = 1000f,
@@ -72,13 +72,13 @@ public class CameraPositionSender : MonoBehaviour
     {
         if (!isApplicationPaused)
         {
-            // La aplicación no está en pausa o en segundo plano
-            // Obtén la posición y rotación de la cámara principal
+            // La aplicaciï¿½n no estï¿½ en pausa o en segundo plano
+            // Obtï¿½n la posiciï¿½n y rotaciï¿½n de la cï¿½mara principal
             Transform cameraTransform = Camera.main.transform;
             Vector3 cameraPosition = cameraTransform.position;
             Vector3 cameraRotation = cameraTransform.eulerAngles;
 
-            // Crea un objeto CameraData y asigna la posición y rotación
+            // Crea un objeto CameraData y asigna la posiciï¿½n y rotaciï¿½n
             CameraData data = new CameraData
             {
                 x = cameraPosition.x,
@@ -95,7 +95,7 @@ public class CameraPositionSender : MonoBehaviour
             Debug.Log("CAMERA Y: " + cameraPosition.y);
             Debug.Log("CAMERA Z: " + cameraPosition.z);
 
-            // Envía el JSON al servidor
+            // Envï¿½a el JSON al servidor
             StartCoroutine(SendDataToServer(json));
         }
     }

@@ -2,45 +2,71 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: snapTurnArrow
-  m_Shader: {fileID: 4800000, guid: 787d7485aa6482341a9f55fa37fb84f1, type: 3}
-  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
+  m_Shader: {fileID: 4800000, guid: a3e1dddc96616ef4991f6d7101d161ca, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ALPHAPREMULTIPLY_ON
   m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: <noninit>
-      second:
+    - <noninit>:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
+    - _AlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
-    - first:
-        name: <noninit>
-      second: 0
-    - first:
-        name: _Darken
-      second: 0.788
-    - first:
-        name: _SeeThru
-      second: 0.819
+    - <noninit>: 0
+    - PixelSnap: 0
+    - _Darken: 0.788
+    - _EnableExternalAlpha: 0
+    - _Fade_Far_Distance_: 0.2
+    - _Fade_Near_Distance_: 0.1
+    - _Fall_End_: 1
+    - _Fall_Start_: 0.77
+    - _Far_Center_Fraction_: 1
+    - _Frequency_: 1
+    - _Near_Center_Fraction_: 0
+    - _Near_Radius_Fraction_: 0.5
+    - _Phase_: 0
+    - _Power_: 1
+    - _Proximity_Distance_: 0.05
+    - _Rise_End_: 0.3
+    - _Rise_Start_: 0
+    - _SeeThru: 0.819
+    - _Shift_: 0
+    - _Shrink_Start_Distance_: 0.1
+    - _Start_Fall_Fade_: 0.05
+    - _Thickness_: 1
     m_Colors:
-    - first:
-        name: <noninit>
-      second: {r: 0, g: 2.0185626, b: 1e-45, a: -1.4179275e-16}
-    - first:
-        name: _TintColor
-      second: {r: 0.2980392, g: 0.6784314, b: 1, a: 0.8235294}
+    - <noninit>: {r: 0, g: 2.0185626, b: 1e-45, a: -1.4179275e-16}
+    - _Base_Color_: {r: 0.6, g: 0.6, b: 0.6, a: 0.698}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color_: {r: 0.0047169924, g: 0.48187622, b: 1, a: 1}
+    - _Edge_Color_: {r: 0.18823496, g: 0.18823496, b: 0.18823496, a: 0.502}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0.2980392, g: 0.6784314, b: 1, a: 0.8235294}
+  m_BuildTextureStacks: []
