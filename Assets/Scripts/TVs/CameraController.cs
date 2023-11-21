@@ -30,6 +30,8 @@ public class CameraController : MonoBehaviour
     private InputAction rotationAction;
     private InputAction zoomAction;
     private bool returnPressedOnce = false;
+    public GameObject[] objectsToEnable;
+    public GameObject[] objectsToDisable;
 
     private void OnEnable()
     {
@@ -47,6 +49,7 @@ public class CameraController : MonoBehaviour
         buttonNavigator.SetButtons(buttonsContainer.GetComponentsInChildren<Button>());
 
         RestoreInitialPositionAndRotation();
+        returnPressedOnce = false;
         StartFadeIn(selectedGX.gameObject);
     }
 
@@ -116,6 +119,9 @@ public class CameraController : MonoBehaviour
                     RestoreInitialPositionAndRotation();
                     StartFadeIn(selectedGX.gameObject);
                     returnPressedOnce = false;
+                    // Enable preview cameras
+                    EnableObjects(objectsToDisable);
+                    DisableObjects(objectsToEnable);
                 }
             }
         }
@@ -126,6 +132,9 @@ public class CameraController : MonoBehaviour
         // Check if the index is within valid bounds
         if (index >= 0 && index < mainCameraGroup.transform.childCount)
         {
+            // Disable preview cameras
+            EnableObjects(objectsToEnable);
+            DisableObjects(objectsToDisable);
             // Deselect the current GX if one is selected
             DeselectGX();
 
@@ -289,6 +298,28 @@ public class CameraController : MonoBehaviour
         {
             // Stop the fading effect when the fade is complete
             isFading = false;
+        }
+    }
+
+    private void EnableObjects(GameObject[] objects)
+    {
+        foreach (GameObject obj in objects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(true);
+            }
+        }
+    }
+
+    private void DisableObjects(GameObject[] objects)
+    {
+        foreach (GameObject obj in objects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(false);
+            }
         }
     }
 }

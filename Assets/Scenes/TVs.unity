@@ -5943,6 +5943,10 @@ MonoBehaviour:
   - {fileID: 930779811}
   - {fileID: 218397858}
   fadeDuration: 0.5
+  objectsToEnable:
+  - {fileID: 1018103301}
+  objectsToDisable:
+  - {fileID: 548510832}
 --- !u!114 &396222341
 MonoBehaviour:
   m_ObjectHideFlags: 0
