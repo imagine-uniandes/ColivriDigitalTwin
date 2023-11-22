@@ -14,12 +14,24 @@ public class PositionSender : MonoBehaviour
         InvokeRepeating("SendPositionData", 0f, updateInterval);
     }
 
+    private void OnApplicationQuit()
+    {
+        ResetPositionData();
+    }
+
     private void SendPositionData()
     {
         Vector3 position = transform.position;
         Quaternion rotation = transform.rotation;
         PositionData data = new PositionData(position.x, position.y, position.z, rotation.eulerAngles.x, rotation.eulerAngles.y, rotation.eulerAngles.z);
 
+        string json = JsonUtility.ToJson(data);
+        StartCoroutine(PostPosition(json));
+    }
+
+    private void ResetPositionData()
+    {
+        PositionData data = new PositionData(1000f, 1000f, 1000f, 0f, 0f, 0f);
         string json = JsonUtility.ToJson(data);
         StartCoroutine(PostPosition(json));
     }
