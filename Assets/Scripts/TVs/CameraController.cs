@@ -101,7 +101,7 @@ public class CameraController : MonoBehaviour
             float zoom = zoomAction.ReadValue<float>() * movementSpeed * Time.deltaTime;
 
             // Rotate the camera based on joystick input
-            selectedGX.Rotate(Rx, -Ry, -Rz);
+            selectedGX.Rotate(Rx, Ry, -Rz);
 
             // Zoom in/out with the Z axis
             Vector3 move = new Vector3(0, -zoom, 0);

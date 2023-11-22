@@ -2907,7 +2907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f3c0e938eb942a07dd5eaecc7b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateInterval: 2
+  updateInterval: 1
 --- !u!1 &183430626
 GameObject:
   m_ObjectHideFlags: 0
@@ -5933,6 +5933,7 @@ MonoBehaviour:
   - {fileID: 1018103301}
   objectsToDisable:
   - {fileID: 548510832}
+  - {fileID: 1677752256}
 --- !u!114 &396222341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6707,7 +6708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f3c0e938eb942a07dd5eaecc7b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateInterval: 2
+  updateInterval: 1
 --- !u!1 &491437923
 GameObject:
   m_ObjectHideFlags: 0
@@ -8596,7 +8597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f3c0e938eb942a07dd5eaecc7b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateInterval: 2
+  updateInterval: 1
 --- !u!1 &624733619
 GameObject:
   m_ObjectHideFlags: 0
@@ -11850,6 +11851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 957953662}
   - component: {fileID: 957953663}
+  - component: {fileID: 957953664}
   m_Layer: 5
   m_Name: SecurityScreen
   m_TagString: Untagged
@@ -11895,6 +11897,27 @@ MonoBehaviour:
   securityCameraGroup: {fileID: 284758191}
   rotationSpeed: 40
   movementSpeed: 7.5
+--- !u!114 &957953664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957953661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887f91657a42d754982fceeb82bc5141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDisable:
+  - {fileID: 1677752256}
+  - {fileID: 483402273}
+  - {fileID: 614434657}
+  - {fileID: 1861160251}
+  - {fileID: 1053885946}
+  - {fileID: 1114395669}
+  objectToEnableWhenDisable:
+  - {fileID: 1677752256}
 --- !u!1 &961498627
 GameObject:
   m_ObjectHideFlags: 0
@@ -13227,7 +13250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f3c0e938eb942a07dd5eaecc7b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateInterval: 2
+  updateInterval: 1
 --- !u!1 &1058752092
 GameObject:
   m_ObjectHideFlags: 0
@@ -14030,7 +14053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f3c0e938eb942a07dd5eaecc7b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateInterval: 2
+  updateInterval: 1
 --- !u!1 &1137633344
 GameObject:
   m_ObjectHideFlags: 0
@@ -16188,7 +16211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f3c0e938eb942a07dd5eaecc7b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateInterval: 2
+  updateInterval: 1
 --- !u!1 &1358395224
 GameObject:
   m_ObjectHideFlags: 0
@@ -20819,7 +20842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f3c0e938eb942a07dd5eaecc7b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateInterval: 2
+  updateInterval: 1
 --- !u!1 &1680704423
 GameObject:
   m_ObjectHideFlags: 0
@@ -22251,7 +22274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f3c0e938eb942a07dd5eaecc7b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateInterval: 2
+  updateInterval: 1
 --- !u!1 &1873654136
 GameObject:
   m_ObjectHideFlags: 0
@@ -24796,7 +24819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f3c0e938eb942a07dd5eaecc7b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateInterval: 2
+  updateInterval: 1
 --- !u!1 &2078560050
 GameObject:
   m_ObjectHideFlags: 0
