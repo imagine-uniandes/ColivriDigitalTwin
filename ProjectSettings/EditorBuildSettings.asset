@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ColivriInteractions.unity
     guid: 84dd2d959feffd84d974c242c0bd7ec2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TVs.unity
     guid: afb10cfd3bac6e74d9a132a3db9db158
   - enabled: 0
@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Oculus/VR/Scenes/ControllerDrivenHandPoses.unity
     guid: 7ea9f7c90c2fa404d86276a633b59903
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MetaQuest2.unity
     guid: 99bc2a70ffbb55a4d988ab4f47ca54ef
   m_configObjects:
