@@ -5921,8 +5921,8 @@ MonoBehaviour:
   buttonsContainer: {fileID: 148485420}
   button1: {fileID: 0}
   button2: {fileID: 0}
-  rotationSpeed: 40
-  movementSpeed: 7.5
+  rotationSpeed: 30
+  movementSpeed: 5
   arrowButtons:
   - {fileID: 2104333901}
   - {fileID: 667854981}
@@ -11895,8 +11895,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coverageView: {fileID: 1720305707}
   securityCameraGroup: {fileID: 284758191}
-  rotationSpeed: 40
-  movementSpeed: 7.5
+  rotationSpeed: 30
+  movementSpeed: 5
 --- !u!114 &957953664
 MonoBehaviour:
   m_ObjectHideFlags: 0
