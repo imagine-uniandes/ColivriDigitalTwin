@@ -84,7 +84,7 @@ public class CameraPositionSender : MonoBehaviour
                 x = cameraPosition.x,
                 y = cameraPosition.y,
                 z = cameraPosition.z,
-                rotx = cameraRotation.x,
+                rotx = cameraRotation.x -90f,
                 roty = cameraRotation.y,
                 rotz = cameraRotation.z
             };
