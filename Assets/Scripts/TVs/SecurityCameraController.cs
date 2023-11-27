@@ -82,7 +82,7 @@ public class SecurityCameraController : MonoBehaviour
             float zoom = zoomAction.ReadValue<float>() * movementSpeed * Time.deltaTime;
 
             // Rotate the camera based on joystick input
-            selectedCameraParent.Rotate(Rx, -Ry, -Rz);
+            selectedCameraParent.Rotate(Rx, Ry, -Rz);
 
             // Zoom in/out with the Z axis
             Vector3 move = new Vector3(0, -zoom, 0);

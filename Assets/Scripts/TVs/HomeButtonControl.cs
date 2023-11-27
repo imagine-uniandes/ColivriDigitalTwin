@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.InputSystem.Users;
+using UnityEngine.EventSystems;
 
 public class HomeButtonControl : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class HomeButtonControl : MonoBehaviour
     {
         resetButton.onClick.AddListener(ResetGame);
         exitButton.onClick.AddListener(ExitGame);
+        EventSystem.current.SetSelectedGameObject(buttonsGroup.GetComponentsInChildren<Button>()[0].gameObject);
     }
 
     private void Update()
