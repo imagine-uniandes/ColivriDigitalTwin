@@ -16,7 +16,7 @@ public class CameraMeta2Data
 
 public class MetaQuest2Sender : MonoBehaviour
 {
-    private string serverURL = "http://172.24.100.110:8080/data/meta30";
+    private string serverURL = "http://172.24.100.110:8080/data/meta5";
     public float updateInterval = 2f; // Intervalo de actualizaci�n en segundos
 
     private bool isApplicationPaused = false;

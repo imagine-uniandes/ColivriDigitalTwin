@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7806003121025770711}
   - component: {fileID: 3522130208443840700}
   - component: {fileID: 4116210617935896087}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2994794213065065162}
   - component: {fileID: 809554169586136255}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObjectController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 6991222424998161576}
   - component: {fileID: 1340606739869917796}
   - component: {fileID: 7981603725700828368}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 8012573440702163359}
   - component: {fileID: 8718990974595888380}
   - component: {fileID: 6654353367237221860}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pantalla LED
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,8 +364,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9134428679830436567}
-  - component: {fileID: 3210703671477183479}
-  m_Layer: 0
+  - component: {fileID: 7348789799731584958}
+  m_Layer: 3
   m_Name: Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3084142610177666702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3210703671477183479
+--- !u!114 &7348789799731584958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -396,9 +396,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3814260475550107700}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a526b63bb08bcc84abaf70de6f05e2d7, type: 3}
+  m_Script: {fileID: 11500000, guid: af14c380c74d76446a3f8e01d88f9071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerButton: {fileID: 0}
 --- !u!1 &7007664977589246699
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +412,7 @@ GameObject:
   - component: {fileID: 1776147242169697596}
   - component: {fileID: 3324689575908243283}
   - component: {fileID: 4710700271854735490}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +517,7 @@ GameObject:
   - component: {fileID: 5337309429131201021}
   - component: {fileID: 5482735293355808774}
   - component: {fileID: 1214266395681532317}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
