@@ -5,8 +5,8 @@ using System;
 
 public class TeleportButton : MonoBehaviour, IPointerClickHandler, IPointerDownHandler
 {
-    public Color32 m_HoverColor = Color.blue;
-    public Color32 m_DownColor = Color.white;
+    public Color32 m_HoverColor;
+    public Color32 m_DownColor;
 
     private Image m_Image = null;
     public GameObject objectToTeleport; // Asigna el objeto que quieres teletransportar en el Inspector

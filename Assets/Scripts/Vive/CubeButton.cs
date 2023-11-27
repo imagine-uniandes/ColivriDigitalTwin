@@ -1,9 +1,14 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections; 
-
-public class CubeButton : MonoBehaviour
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+public class CubeButton : MonoBehaviour, IPointerClickHandler, IPointerDownHandler
 {
+    public Color32 m_HoverColor;
+    public Color32 m_DownColor;
+
+    private Image m_Image = null;
     private int clickCount = 0;
     private int keyPressCount = 0;
 
@@ -11,6 +16,19 @@ public class CubeButton : MonoBehaviour
 
     //0 = estado actual
     //1 = estado futuro
+        public void OnPointerClick(PointerEventData eventData)
+    {
+        print("Click");
+        m_Image.color = m_HoverColor;
+        OnMouseDown(); // Llama a la función de teletransporte cuando se hace clic
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        print("Down");
+        m_Image.color = m_DownColor;
+    }
+
     private void OnMouseDown()
     {
         StartCoroutine(GetLedStateAndUpdateClicks());
