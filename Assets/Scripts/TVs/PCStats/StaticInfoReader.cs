@@ -37,23 +37,43 @@ public class StaticInfoReader : MonoBehaviour
         string[] headers = lines[0].Split(',');
         for (int i = 1; i < lines.Length; i++)
         {
-            string[] values = lines[i].Split(',');
-            Dictionary<string, string> entry = new Dictionary<string, string>();
-            for (int j = 0; j < headers.Length && j < values.Length; j++)
+            string[] values = lines[i].Trim().Split(',');
+
+            // Check if the line is not empty
+            if (values.Length > 0 && !string.IsNullOrEmpty(values[0]))
             {
-                entry[headers[j]] = values[j];
+                Dictionary<string, string> entry = new Dictionary<string, string>();
+                for (int j = 0; j < headers.Length && j < values.Length; j++)
+                {
+                    entry[headers[j]] = values[j];
+                }
+                dataList.Add(entry);
             }
-            dataList.Add(entry);
         }
     }
 
     void DisplayCurrentPC()
     {
-        Dictionary<string, string> currentPC = dataList[currentIndex];
-        displayText.text = $"<b>PC {currentIndex}\n</b>";
-        foreach (var kvp in currentPC)
+        // Check if dataList is not empty and currentIndex is a valid index
+        if (dataList.Count > 0 && currentIndex >= 0 && currentIndex < dataList.Count)
         {
-            displayText.text += "<b>" + kvp.Key + ":</b> " + kvp.Value + "\n";
+            Dictionary<string, string> currentPC = dataList[currentIndex];
+            displayText.text = $"<b>PC {currentIndex}</b>\n";
+
+            // Iterate over key-value pairs, excluding the last one
+            int count = 0;
+            foreach (var kvp in currentPC)
+            {
+                if (count < currentPC.Count - 1)
+                {
+                    displayText.text += "<b>" + kvp.Key + ":</b> " + kvp.Value + "\n";
+                }
+                count++;
+            }
+        }
+        else
+        {
+            displayText.text = "No data available";
         }
     }
 
