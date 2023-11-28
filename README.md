@@ -2,7 +2,7 @@
 
 ## About the Project
 
-ColivriDigitalTwin is a Unity-based project that aims to create a digital replica of the Colivri laboratory at the University of Los Andes. The project facilitates experimentation and the development of new technologies, emphasizing virtual and augmented reality, simulators, and human-robot interfaces. This initiative is led by a team of students as part of their degree project within the Systems Engineering program at the university.
+Colivri Digital Twin is a Unity-based project that aims to create a digital replica of the Colivri laboratory at the University of Los Andes. The project facilitates experimentation and the development of new technologies, emphasizing virtual and augmented reality, simulators, and human-robot interfaces. This initiative is led by a team of students as part of their degree project within the Systems Engineering program at the university.
 
 ### Organization of Objects and Naming Conventions in Unity
 
@@ -61,7 +61,47 @@ In the context of Augmented Reality, the project enables users to view additiona
 
 To get started with the project, please refer to the [official development documentation](https://imagine-uniandes.github.io/ColivriDigitalTwin/development/) for detailed information on the project structure, setup instructions, and development guidelines.
 
-## Using the Space Mouse Compact Controller with the TVs Screen
+## Control Center (TVs Scene) Configuration
+
+This section provides specific configurations for the Control Center (TVs Scene) in Unity. Follow these instructions to set up the Control Center environment effectively.
+
+### 1. FMOD instructions for audio simulation
+
+We have added FMOD to the gitignore to avoid conflicts with other scenes or devices. If you are running or building the TVs scene, follow these steps:
+
+- Install the FMOD plugin from the Unity Package Manager.
+- Follow the setup dialog window that FMOD suggests.
+- Install the FMOD editor and link a project file with the 4 audio events for the audio screen.
+
+### 2. Displays configuration information
+
+To configure multiple displays in the Unity editor for the 8-display setup, follow these steps:
+
+- Arrange displays in Unity as follows:
+  - Display 2 in 1.1.
+  - Display 3 in 1.2.
+  - Display 4 in 1.3.
+  - Display 5 in 2.1.
+  - Display 6 in 2.2.
+  - Display 1 in 2.3.
+  - Display 7 in 3.1.
+  - Display 8 in 3.2.
+- Recommend having an additional monitor for virtual arranging of Unity editor game undocked windows.
+- Use the Unity editor on your main monitor.
+- At build, ensure you have the real 8 displays, and Unity will open automatically on each display with a specific camera.
+
+**Unity Display Arrangement:**
+```
+   +---+---+---+
+   | 2 | 5 | 7 |
+   +---+---+---+
+   | 3 | 6 | 8 |
+   +---+---+---+
+   | 4 | 1 | X |
+   +---+---+---+
+```
+
+### 3. Using the Space Mouse Compact Controller with the TVs Screen
 
 To use the Space Mouse Compact Controller with the TV screens in the ColivriDigitalTwin project, follow these steps:
 
