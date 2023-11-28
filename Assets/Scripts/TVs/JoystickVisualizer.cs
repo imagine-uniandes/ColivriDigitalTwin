@@ -11,7 +11,7 @@ public class JoystickVisualizer : MonoBehaviour
     public Image rotationImage;
     private PlayerInput playerInput;
     private InputAction rotationAction;
-    public float rotationSpeed = 5f;
+    public float rotationSpeed = 180f;
 
     private void OnEnable()
     {
