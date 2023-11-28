@@ -75,12 +75,15 @@ To use the Space Mouse Compact Controller with the TV screens in the ColivriDigi
 
 This section provides guidance on integrating the ColivriDigitalTwin project with Meta Quest 2 for an immersive experience.
 
-###Prerequisites
+Prerequisites
+
 Unity 20XX.XX or later.
 Oculus Integration Package (version XX.XX.X).
 Meta Quest 2 headset.
 
+
 Installation
+
 Clone this repository to your local machine.
 Open the project in Unity.
 Install the Oculus Integration package via the Unity Package Manager.
@@ -89,7 +92,9 @@ In Unity, navigate to Window > Package Manager.
 Find "Oculus Integration" and install the latest version.
 Follow the Oculus Integration documentation for configuring your project settings, including setting up the Oculus App ID.
 
+
 Universal Render Pipeline (URP) Settings
+
 Open the Graphics settings in Unity (Edit > Project Settings > Graphics).
 Set the Scriptable Render Pipeline Settings to the URP Asset in your project.
 Shadow Settings
