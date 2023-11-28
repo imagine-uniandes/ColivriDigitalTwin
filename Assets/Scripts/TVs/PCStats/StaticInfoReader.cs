@@ -4,6 +4,10 @@ using TMPro;
 using System.Collections;
 using System.IO;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.InputSystem.Users;
+using UnityEngine.EventSystems;
 
 public class StaticInfoReader : MonoBehaviour
 {
@@ -14,7 +18,10 @@ public class StaticInfoReader : MonoBehaviour
     private int currentIndex = 0;
     private bool isStaticPanelEnabled = false;
     private float inputCooldown = 0.2f;
+    public float rotationThreshold = 0.25f;
     private float lastInputTime;
+    private PlayerInput playerInput;
+    private InputAction rotationAction;
 
     void Start()
     {
@@ -27,6 +34,13 @@ public class StaticInfoReader : MonoBehaviour
         staticInfoPanel.SetActive(false);
         statsPanel.SetActive(true);
         isStaticPanelEnabled = false;
+
+        playerInput = GetComponentInParent<PlayerInput>();
+        if (playerInput == null)
+        {
+            Debug.LogError("PlayerInput component not found. Please attach the PlayerInput component to this GameObject.");
+        }
+        rotationAction = playerInput.actions["Rotation"];
     }
 
     void LoadDataFromCSV()
@@ -79,37 +93,24 @@ public class StaticInfoReader : MonoBehaviour
 
     void Update()
     {
+        // Change index by using right/left movement
         float horizontalInput = Input.GetAxis("Horizontal");
 
         if (Time.time - lastInputTime > inputCooldown)
         {
             if (horizontalInput > 0.5f)
             {
-                if (!isStaticPanelEnabled)
-                {
-                    statsPanel.SetActive(false);
-                    staticInfoPanel.SetActive(true);
-                    isStaticPanelEnabled = true;
-                }
-
-                currentIndex = (currentIndex + 1) % dataList.Count;
-                DisplayCurrentPC();
-                lastInputTime = Time.time;
+                HandleHorizontalInputPositive();
             }
             else if (horizontalInput < -0.5f)
             {
-                if (isStaticPanelEnabled)
-                {
-                    statsPanel.SetActive(false);
-                    staticInfoPanel.SetActive(true);
-                    isStaticPanelEnabled = true;
-                }
-
-                currentIndex = (currentIndex - 1 + dataList.Count) % dataList.Count;
-                DisplayCurrentPC();
-                lastInputTime = Time.time;
+                HandleHorizontalInputNegative();
             }
         }
+
+        // Change index by using rotation
+        RotateSpace(rotationAction.ReadValue<Vector3>().y);
+
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -117,5 +118,51 @@ public class StaticInfoReader : MonoBehaviour
             statsPanel.SetActive(true);
             isStaticPanelEnabled = false;
         }
+    }
+
+    public void RotateSpace(float rotation)
+    {
+        if (Mathf.Abs(rotation) > rotationThreshold && Time.time - lastInputTime >= inputCooldown)
+        {
+            // Move to the next or previous button based on the rotation direction
+            if (rotation > rotationThreshold)
+            {
+                HandleHorizontalInputPositive();
+            }
+            else if (rotation < -rotationThreshold)
+            {
+                HandleHorizontalInputNegative();
+            }
+
+            lastInputTime = Time.time;
+        }
+    }
+
+    void HandleHorizontalInputPositive()
+    {
+        if (!isStaticPanelEnabled)
+        {
+            statsPanel.SetActive(false);
+            staticInfoPanel.SetActive(true);
+            isStaticPanelEnabled = true;
+        }
+
+        currentIndex = (currentIndex + 1) % dataList.Count;
+        DisplayCurrentPC();
+        lastInputTime = Time.time;
+    }
+
+    void HandleHorizontalInputNegative()
+    {
+        if (!isStaticPanelEnabled)
+        {
+            statsPanel.SetActive(false);
+            staticInfoPanel.SetActive(true);
+            isStaticPanelEnabled = true;
+        }
+
+        currentIndex = (currentIndex - 1 + dataList.Count) % dataList.Count;
+        DisplayCurrentPC();
+        lastInputTime = Time.time;
     }
 }
