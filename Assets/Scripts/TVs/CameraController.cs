@@ -16,6 +16,7 @@ public class CameraController : MonoBehaviour
     public float movementSpeed = 3.5f; // Speed of movement
     public Button[] arrowButtons; // Array of arrow buttons
     private Transform selectedGX;
+    private Transform selectedPreview;
     private int selectedIndex = -1; // Currently selected GX index
     private Vector3 initialPosition; // Initial position of the selected GX
     private Quaternion initialRotation; // Initial rotation of the selected GX
@@ -93,6 +94,7 @@ public class CameraController : MonoBehaviour
             {
                 Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * movementSpeed * Time.deltaTime;
                 selectedGX.Translate(movement);
+                selectedPreview.Translate(movement);
             }
 
             // Rotate with joystick
@@ -103,10 +105,12 @@ public class CameraController : MonoBehaviour
 
             // Rotate the camera based on joystick input
             selectedGX.Rotate(Rx, Ry, -Rz);
+            selectedPreview.Rotate(Rx, Ry, -Rz);
 
             // Zoom in/out with the Z axis
             Vector3 move = new Vector3(0, -zoom, 0);
-            mainCameraGroup.transform.Translate(move);
+            selectedGX.transform.Translate(move);
+            selectedPreview.transform.Translate(move);
 
             // Go back to the selection menu
             if (Input.GetKeyDown(KeyCode.Return))
@@ -146,6 +150,8 @@ public class CameraController : MonoBehaviour
             selectedGX.gameObject.SetActive(true);
             StartFadeIn(selectedGX.gameObject);
             selectedIndex = index;
+
+            selectedPreview = previewCameraGroup.transform.GetChild(index);
 
             // Store the initial position and rotation
             initialPosition = selectedGX.position;

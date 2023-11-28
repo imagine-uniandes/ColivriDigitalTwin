@@ -5891,6 +5891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCameraGroup: {fileID: 1628794780}
+  previewCameraGroup: {fileID: 167471984}
   buttonsContainer: {fileID: 148485420}
   button1: {fileID: 0}
   button2: {fileID: 0}
