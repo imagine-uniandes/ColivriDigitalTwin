@@ -1,18 +1,18 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DisableObjectsForever : MonoBehaviour
+public class EnableObjectsForever : MonoBehaviour
 {
-    public GameObject[] objectsToDisable;
+    public GameObject[] objectsToEnable;
     public GameObject[] objectToEnableWhenDisable;
     private void OnEnable()
     {
-        DisableObjects(objectsToDisable);
+        EnableObjects(objectsToEnable);
     }
 
     private void OnDisable()
     {
-        EnableObjects(objectToEnableWhenDisable);
+        DisableObjects(objectToEnableWhenDisable);
     }
 
     private void EnableObjects(GameObject[] objects)
