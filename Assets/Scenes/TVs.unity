@@ -5906,7 +5906,6 @@ MonoBehaviour:
   - {fileID: 1018103301}
   objectsToDisable:
   - {fileID: 548510832}
-  - {fileID: 1677752256}
 --- !u!114 &396222341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20025,8 +20024,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Presione el bot\xF3n de selecci\xF3n otra vez para reestablecer la c\xE1mara
-    seleccionada"
+  m_text: "Presione el bot\xF3n derecho otra vez para seleccionar una c\xE1mara distinta"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 617b66a56c293474188b2b1f5d0b549b, type: 2}
   m_sharedMaterial: {fileID: 584730439898264728, guid: 617b66a56c293474188b2b1f5d0b549b, type: 2}

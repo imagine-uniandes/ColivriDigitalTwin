@@ -8,6 +8,7 @@ using UnityEngine.InputSystem.Users;
 public class CameraController : MonoBehaviour
 {
     public GameObject mainCameraGroup;
+    public GameObject previewCameraGroup;
     public GameObject buttonsContainer; // Use a single GameObject to hold all buttons
     public Button button1;
     public Button button2;
@@ -117,7 +118,6 @@ public class CameraController : MonoBehaviour
                 else
                 {
                     RestoreInitialPositionAndRotation();
-                    StartFadeIn(selectedGX.gameObject);
                     returnPressedOnce = false;
                     // Enable preview cameras
                     EnableObjects(objectsToDisable);
@@ -180,23 +180,16 @@ public class CameraController : MonoBehaviour
 
     private void RestoreInitialPositionAndRotation()
     {
-        // Restore the initial position and rotation
-        int lastGXIndex = mainCameraGroup.transform.childCount - 1;
-        if (selectedGX != null && selectedGX != mainCameraGroup.transform.GetChild(lastGXIndex))
+        canMove = false; // Disallow movement when deselected
+
+        // Enable the buttons within buttonsContainer when returning to the selection menu
+        Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
+        foreach (Button button in buttons)
         {
-            selectedGX.position = initialPosition;
-            selectedGX.rotation = initialRotation;
-            canMove = false; // Disallow movement when deselected
-
-            // Enable the buttons within buttonsContainer when returning to the selection menu
-            Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
-            foreach (Button button in buttons)
-            {
-                button.interactable = true;
-            }
-
-            DisableArrowButtons();
+            button.interactable = true;
         }
+
+        DisableArrowButtons();
     }
 
     private void EnableArrowButtons()
