@@ -8,13 +8,15 @@ using UnityEngine.InputSystem.Users;
 public class CameraController : MonoBehaviour
 {
     public GameObject mainCameraGroup;
+    public GameObject previewCameraGroup;
     public GameObject buttonsContainer; // Use a single GameObject to hold all buttons
     public Button button1;
     public Button button2;
     public float rotationSpeed = 5f; // Speed of rotation in degrees per second
-    public float movementSpeed = 1f; // Speed of movement
+    public float movementSpeed = 3.5f; // Speed of movement
     public Button[] arrowButtons; // Array of arrow buttons
     private Transform selectedGX;
+    private Transform selectedPreview;
     private int selectedIndex = -1; // Currently selected GX index
     private Vector3 initialPosition; // Initial position of the selected GX
     private Quaternion initialRotation; // Initial rotation of the selected GX
@@ -26,11 +28,14 @@ public class CameraController : MonoBehaviour
     private bool isFading = false; // Flag to track if fading is in progress
     private Camera[] cameras; // Array of cameras to adjust fading
     private PlayerInput playerInput;
+    private ButtonNavigator buttonNavigator;
     private InputAction rotationAction;
     private InputAction zoomAction;
     private bool returnPressedOnce = false;
+    public GameObject[] objectsToEnable;
+    public GameObject[] objectsToDisable;
 
-    private void Awake()
+    private void OnEnable()
     {
         playerInput = GetComponentInParent<PlayerInput>();
         if (playerInput == null)
@@ -39,6 +44,15 @@ public class CameraController : MonoBehaviour
         }
         rotationAction = playerInput.actions["Rotation"];
         zoomAction = playerInput.actions["Zoom"];
+
+        buttonNavigator = GetComponentInParent<ButtonNavigator>();
+        if (buttonNavigator == null)
+            Debug.LogError("ButtonNavigator script not found in the parent GameObject.");
+        buttonNavigator.SetButtons(buttonsContainer.GetComponentsInChildren<Button>());
+
+        RestoreInitialPositionAndRotation();
+        returnPressedOnce = false;
+        StartFadeIn(selectedGX.gameObject);
     }
 
     private void Start()
@@ -57,6 +71,8 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        buttonNavigator.NavigateButtons(rotationAction.ReadValue<Vector3>().y);
+
         if (selectedGX == null)
         {
             // No GX is selected, return
@@ -78,6 +94,7 @@ public class CameraController : MonoBehaviour
             {
                 Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * movementSpeed * Time.deltaTime;
                 selectedGX.Translate(movement);
+                selectedPreview.Translate(movement);
             }
 
             // Rotate with joystick
@@ -87,27 +104,28 @@ public class CameraController : MonoBehaviour
             float zoom = zoomAction.ReadValue<float>() * movementSpeed * Time.deltaTime;
 
             // Rotate the camera based on joystick input
-            selectedGX.Rotate(Rx, Ry, Rz);
+            selectedGX.Rotate(Rx, Ry, -Rz);
+            selectedPreview.Rotate(Rx, Ry, -Rz);
 
             // Zoom in/out with the Z axis
-            Vector3 move = new Vector3(0, 0, zoom);
-            mainCameraGroup.transform.Translate(move);
+            Vector3 move = new Vector3(0, -zoom, 0);
+            selectedGX.transform.Translate(move);
+            selectedPreview.transform.Translate(move);
 
             // Go back to the selection menu
-            if (canMove)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (!returnPressedOnce)
                 {
-                    if (!returnPressedOnce)
-                    {
-                        returnPressedOnce = true;
-                    }
-                    else
-                    {
-                        RestoreInitialPositionAndRotation();
-                        StartFadeIn(selectedGX.gameObject);
-                        returnPressedOnce = false;
-                    }
+                    returnPressedOnce = true;
+                }
+                else
+                {
+                    RestoreInitialPositionAndRotation();
+                    returnPressedOnce = false;
+                    // Enable preview cameras
+                    EnableObjects(objectsToDisable);
+                    DisableObjects(objectsToEnable);
                 }
             }
         }
@@ -118,6 +136,9 @@ public class CameraController : MonoBehaviour
         // Check if the index is within valid bounds
         if (index >= 0 && index < mainCameraGroup.transform.childCount)
         {
+            // Disable preview cameras
+            EnableObjects(objectsToEnable);
+            DisableObjects(objectsToDisable);
             // Deselect the current GX if one is selected
             DeselectGX();
 
@@ -129,6 +150,8 @@ public class CameraController : MonoBehaviour
             selectedGX.gameObject.SetActive(true);
             StartFadeIn(selectedGX.gameObject);
             selectedIndex = index;
+
+            selectedPreview = previewCameraGroup.transform.GetChild(index);
 
             // Store the initial position and rotation
             initialPosition = selectedGX.position;
@@ -163,23 +186,16 @@ public class CameraController : MonoBehaviour
 
     private void RestoreInitialPositionAndRotation()
     {
-        // Restore the initial position and rotation
-        int lastGXIndex = mainCameraGroup.transform.childCount - 1;
-        if (selectedGX != null && selectedGX != mainCameraGroup.transform.GetChild(lastGXIndex))
+        canMove = false; // Disallow movement when deselected
+
+        // Enable the buttons within buttonsContainer when returning to the selection menu
+        Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
+        foreach (Button button in buttons)
         {
-            selectedGX.position = initialPosition;
-            selectedGX.rotation = initialRotation;
-            canMove = false; // Disallow movement when deselected
-
-            // Enable the buttons within buttonsContainer when returning to the selection menu
-            Button[] buttons = buttonsContainer.GetComponentsInChildren<Button>();
-            foreach (Button button in buttons)
-            {
-                button.interactable = true;
-            }
-
-            DisableArrowButtons();
+            button.interactable = true;
         }
+
+        DisableArrowButtons();
     }
 
     private void EnableArrowButtons()
@@ -281,6 +297,28 @@ public class CameraController : MonoBehaviour
         {
             // Stop the fading effect when the fade is complete
             isFading = false;
+        }
+    }
+
+    private void EnableObjects(GameObject[] objects)
+    {
+        foreach (GameObject obj in objects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(true);
+            }
+        }
+    }
+
+    private void DisableObjects(GameObject[] objects)
+    {
+        foreach (GameObject obj in objects)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(false);
+            }
         }
     }
 }

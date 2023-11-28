@@ -9,7 +9,7 @@ public class SecurityCameraController : MonoBehaviour
     public GameObject coverageView;
     public GameObject securityCameraGroup;
     public float rotationSpeed = 5f;
-    public float movementSpeed = 1f;
+    public float movementSpeed = 3.5f;
     private Camera[] cameras;
     private Transform selectedCameraParent;
     private int selectedIndex = -1;
@@ -82,10 +82,10 @@ public class SecurityCameraController : MonoBehaviour
             float zoom = zoomAction.ReadValue<float>() * movementSpeed * Time.deltaTime;
 
             // Rotate the camera based on joystick input
-            selectedCameraParent.Rotate(Rx, Ry, Rz);
+            selectedCameraParent.Rotate(Rx, Ry, -Rz);
 
             // Zoom in/out with the Z axis
-            Vector3 move = new Vector3(0, 0, zoom);
+            Vector3 move = new Vector3(0, -zoom, 0);
             selectedCameraParent.transform.Translate(move);
         }
 

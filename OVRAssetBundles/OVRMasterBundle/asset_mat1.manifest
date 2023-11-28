@@ -1,0 +1,56 @@
+ManifestFileVersion: 0
+CRC: 3655160430
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9ccf1b29d35e366473bd2a402f32c33c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b30fce1a9ad74efb72be6c308c56e365
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Materials/MattBlack.mat
+- Assets/Materials/Materials/TableroControlAlumbrado.mat
+- Assets/Surface/Shiny Metal_01.mat
+- Assets/Materials/LightGrey.mat
+- Assets/Materials/Grey.mat
+- Assets/Surface/DarkGlass.mat
+- Assets/YughuesFreeMetalMaterials/Materials/M_YFMM_35.mat
+- Assets/Materials/GlowLight.mat
+- Assets/Surface/Fabric_01_White.mat
+- Assets/Materials/Rope.mat
+- Assets/Materials/BlackBackChair.mat
+- Assets/Materials/New Material.mat
+- Assets/Materials/BAColorBlack.mat
+- Assets/YughuesFreeMetalMaterials/Materials/M_YFMM_18.mat
+- Assets/Materials/MaderaEscritorios.mat
+- Packages/com.unity.probuilder/Content/Resources/Materials/ProBuilderDefault.mat
+- Assets/Materials/RailingBottom.mat
+- Assets/Surface/Adler Light Wood.mat
+- Assets/Materials/AppleKeyboard.mat
+- Assets/Materials/Materials/CautionTape.mat
+- Assets/Materials/material_2 1.mat
+- Assets/Materials/Orange.mat
+- Assets/Materials/apple_leopard_desktop_test.mat
+- Assets/Materials/New Material 1.mat
+- Assets/Materials/PlainWhite.mat
+- Assets/Materials/ShiningWhite.mat
+- Assets/Materials/GreenButton.mat
+- Assets/Models/dell materials/Metal_Corrugated_Shiny.mat
+- Assets/YughuesFreeMetalMaterials/Materials/M_YFMM_47.mat
+- Assets/Surface/Shiny Metal_02.mat
+Dependencies:
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_jpeg0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_png0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_tga0

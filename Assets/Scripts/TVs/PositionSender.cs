@@ -5,22 +5,33 @@ using UnityEngine.Networking;
 public class PositionSender : MonoBehaviour
 {
     private string serverURL;
-    private string computerID;
-    public float updateInterval = 15f;
+    public float updateInterval = 2f;
     private bool isApplicationPaused = false;
 
     private void OnEnable()
     {
-        computerID = gameObject.name;
-        serverURL = "http://172.24.100.110:8080/data/control-center-" + computerID;
-        InvokeRepeating("SendPositionData", 0f, 15f);
+        serverURL = "http://172.24.100.110:8080/data/control-center";
+        InvokeRepeating("SendPositionData", 0f, updateInterval);
+    }
+
+    private void OnApplicationQuit()
+    {
+        ResetPositionData();
     }
 
     private void SendPositionData()
     {
         Vector3 position = transform.position;
-        PositionData data = new PositionData(position.x, position.y, position.z);
+        Quaternion rotation = transform.rotation;
+        PositionData data = new PositionData(position.x, position.y, position.z, rotation.eulerAngles.x, rotation.eulerAngles.y, rotation.eulerAngles.z);
 
+        string json = JsonUtility.ToJson(data);
+        StartCoroutine(PostPosition(json));
+    }
+
+    private void ResetPositionData()
+    {
+        PositionData data = new PositionData(1000f, 1000f, 1000f, 0f, 0f, 0f);
         string json = JsonUtility.ToJson(data);
         StartCoroutine(PostPosition(json));
     }
@@ -51,12 +62,18 @@ public class PositionSender : MonoBehaviour
         public float x;
         public float y;
         public float z;
+        public float rotx;
+        public float roty;
+        public float rotz;
 
-        public PositionData(float x, float y, float z)
+        public PositionData(float x, float y, float z, float rx, float ry, float rz)
         {
             this.x = x;
             this.y = y;
             this.z = z;
+            this.rotx = rx;
+            this.roty = ry;
+            this.rotz = rz;
         }
     }
 }

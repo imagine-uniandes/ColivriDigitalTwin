@@ -111,6 +111,44 @@ To use the Space Mouse Compact Controller with the TV screens in the ColivriDigi
 4. Disable the 3Dconnexion KMJ Emulator to prevent conflicts with executions. You can find a guide on how to disable it in this [tutorial](https://wrw.is/how-to-disable-the-3dconnexion-kmj-emulator-game-controller-to-fix-conflicts/).
 5. Configure the buttons on the 3Dconnexion controller as follows: set the left button as "M" and the right button as "Enter" for optimal functionality.
 
+## Meta Quest 2 Integration
+
+This section provides guidance on integrating the ColivriDigitalTwin project with Meta Quest 2 for an immersive experience.
+
+Prerequisites
+
+Unity 20XX.XX or later.
+Oculus Integration Package (version XX.XX.X).
+Meta Quest 2 headset.
+
+
+Installation
+
+Clone this repository to your local machine.
+Open the project in Unity.
+Install the Oculus Integration package via the Unity Package Manager.
+Configuring Oculus Integration
+In Unity, navigate to Window > Package Manager.
+Find "Oculus Integration" and install the latest version.
+Follow the Oculus Integration documentation for configuring your project settings, including setting up the Oculus App ID.
+
+
+Universal Render Pipeline (URP) Settings
+
+Open the Graphics settings in Unity (Edit > Project Settings > Graphics).
+Set the Scriptable Render Pipeline Settings to the URP Asset in your project.
+Shadow Settings
+Disable cast shadows to improve performance on the Meta Quest 2:
+
+Navigate to the object that needs its shadows disabled.
+In the Inspector window, uncheck "Cast Shadows."
+Quality Settings
+Adjust the quality settings to match the capabilities of the Meta Quest 2:
+
+Open the Quality settings in Unity (Edit > Project Settings > Quality).
+Create a new quality level specifically for Meta Quest 2.
+Adjust settings such as anti-aliasing, texture quality, and anisotropic filtering to optimize performance.
+
 ## Development Team
 
 The ColivriDigitalTwin project is being developed by a dedicated team, including:

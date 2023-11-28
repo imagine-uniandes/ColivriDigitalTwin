@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 874147142
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3f4d28ff2db4dcfe6b5e49fb0390289d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5e762ccb57c4caaabbb5a4199ac82c23
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractive.shadergraph
+Dependencies: []

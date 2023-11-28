@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1174950089
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5722db5cb3fdc86f74a646911a54e77e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e8df1f9f82371e82de919a94edcc7dd6
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Materials/Propeller3.controller
+- Assets/Materials/Propeller2.controller
+- Assets/Materials/Propeller1.controller
+- Assets/Materials/Propeller4.controller
+Dependencies:
+- C:/Users/Juanes Rodriguez/Desktop/GemeloDigitalMetaQuest/ColivriDigitalTwin/OVRAssetBundles/OVRMasterBundle/asset_anim0
