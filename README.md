@@ -118,7 +118,7 @@ This section provides guidance on integrating the ColivriDigitalTwin project wit
 Prerequisites
 
 
-Oculus Integration Package (version XX.XX.X).
+Oculus Integration Package .
 Meta Quest 2 headset.
 
 
