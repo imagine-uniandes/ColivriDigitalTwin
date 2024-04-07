@@ -13,15 +13,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.meta.xr.sdk.avatars.sample.assets": {
-      "version": "24.1.1",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.meta.xr.sdk.avatars": "24.1.1"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.meta.xr.sdk.core": {
       "version": "59.0.0",
       "depth": 2,
